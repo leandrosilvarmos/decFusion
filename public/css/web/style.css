@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+/* Menu --- NAVBAR  */
+
+h1{
+    text-align: center;
+    padding: 5% 0;
+    font-size: 85px;
+    font-family: 'Josefin Slab', serif;
+    color: #3A3C42;
+    
+}
+
+li , a  , button{
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+header{
+  
+height:auto;
+width: 100%;
+background-image: url("../../assets/Grupo\ 1.jpg"); 
+background-size: cover;
+transition: 3s;
+
+    
+}
+
+
+header:hover{
+    background-position: center left;
+}
+
+.navbar{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 0;
+}
+
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+a{
+    transition: all 0.3s ease 0s;
+    color: #FFFFFE;
+}
+
+
+.btn-links{
+    padding: 3px 10px;
+    background-color: #3A3C42;
+    opacity: 0.6;
+    border: 1px solid #FFFFFE;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    margin: 5px;
+
+}
+
+
+
+a.active , nav a:hover{
+    background: #3A3C42;
+    opacity: 0.8;
+    transition: .5s;
+    border-radius: 3px;
+    padding: 5px;
+    
+}
+
+ul li a:hover{
+    text-decoration: none;
+    list-style: none;
+    color: #FFFFFE;
+}
+
+
+/* height: 30vh;
+width: 100%;
+background-image: url("../../assets/Grupo\ 1.jpg"); */
+
+/* nav{
+height: 30vh;
+width: 100%;
+background-image: url("../../assets/Grupo\ 1.jpg");
+display: flex;
+
+}
+
+label.logo{
+    color: honeydew;
+    font-size: 35px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul li{
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin:0 5px;   
+}
+
+nav ul li a{
+    font-size: 18px;
+    color: black;
+    border-radius: 3px;
+    
+}
+
+a.active , a:hover{
+    background: brown;
+    transition: .5s;
+    
+}
+
+ul li a:hover{
+    text-decoration: none;
+    list-style: none;
+    color: blanchedalmond;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#checkbox{
+    display: none;
+} */
+
+@media(max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+}
+
+
+/* Cards inicias */
+.objetivo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40vh;
+    margin: 10% 0;
+    background-color: #CCD3E8;
+}
+
+.objetivo .card{
+    width: 320px ;
+    height: auto;
+    background-color: #FFFFFE;
+    border: 1px solid #FF9717;
+    border-radius: 3px;
+    padding: 20px ;
+    margin: 0 2px;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2); 
+    transition: 0.5s;
+}
+
+.objetivo .card p{
+    text-align: justify;
+}
+
+.objetivo .title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 20px;
+}
+
+.objetivo .title h2{
+    font-family: 'Josefin Slab', serif;
+font-size: 30px;
+color: #3A3C42;
+}
+
+.objetivo .title img{
+    width: 60px;
+}
+
+/* Cards Objetivo */
+.conceito{
+    display: flex;
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 10% 0;
+
+}
+
+.conceito .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #FFFFFE;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2); 
+    transition: 0.5s;
+}
+
+.conceito .card .circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #3A3C42;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+    
+}
+
+
+.conceito .card .circle h2{
+  color: #FFFFFE;
+  font-size: 25px;
+  padding: 20px 0;
+    
+}
+
+.conceito .card .content{
+    position: absolute;
+    bottom: 10px;
+    padding: 40px;
+    text-align: center;
+}
+
+.conceito .card .content p{
+    color: #3A3C42;
+}
+
+
+.conceito .card:nth-child(1) .circle{
+    background-color: #FF9717;
+}

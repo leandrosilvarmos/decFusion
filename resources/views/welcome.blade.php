@@ -1,16 +1,77 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.web')
+@section('content')
 
-        <title>Laravel</title>
+<section class="objetivo">
+    <div class="card">
+        <div class="title">
+            <img src="{{asset('assets/iconfinder_ideation_3380384.png')}}" alt="">
+            <h2>Inovação</h2>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
+            Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
+        </p>
+    </div>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <div class="card">
+        <div class="title">
+            <img src="{{asset('assets/mission.png')}}" alt="">
+            <h2>Objetivo</h2>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
+            Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
+        </p>
+    </div>
 
-        <!-- Styles -->
-        <style>
+    <div class="card">
+        <div class="title">
+            <img src="{{asset('assets/peer-to-peer.png')}}" alt="">
+            <h2>Interação</h2>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
+            Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
+        </p>
+    </div>
+</section>
+
+
+<section class="conceito">
+    <div class="card">
+        <div class="circle">
+            <h2> Cliente</h2>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
+                Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="circle">
+            <h2> Profissionais </h2>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
+                Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
+            </p>
+        </div>
+    </div>
+</section>
+
+@endsection
+
+
+<!-- <style>
             html, body {
                 background-color: #fff;
                 color: #636b6f;
@@ -61,40 +122,4 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    DacFusion
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+        </style> -->
