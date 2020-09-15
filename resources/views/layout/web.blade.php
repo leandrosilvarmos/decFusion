@@ -17,6 +17,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
 
 
     <!-- Styles -->

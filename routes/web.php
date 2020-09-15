@@ -19,9 +19,11 @@ Route::get('/', function () {
 
 
 Route::get('/produtos', function () {
-    return view('produtos/index');
+    return view('admin/produtos/index');
 });
 
-
+Route::get('/dashboard', function () {
+    return view('admin/dashboard/index');
+});
 
 

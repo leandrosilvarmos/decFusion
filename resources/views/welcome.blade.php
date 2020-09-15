@@ -4,8 +4,8 @@
 <section class="objetivo">
     <div class="card">
         <div class="title">
-            <img src="{{asset('assets/iconfinder_ideation_3380384.png')}}" alt="">
             <h2>Inovação</h2>
+            <img src="{{asset('assets/iconfinder_ideation_3380384.png')}}" alt="">
         </div>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -16,8 +16,8 @@
 
     <div class="card">
         <div class="title">
-            <img src="{{asset('assets/mission.png')}}" alt="">
             <h2>Objetivo</h2>
+            <img src="{{asset('assets/mission.png')}}" alt="">
         </div>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -28,8 +28,8 @@
 
     <div class="card">
         <div class="title">
-            <img src="{{asset('assets/peer-to-peer.png')}}" alt="">
             <h2>Interação</h2>
+            <img src="{{asset('assets/peer-to-peer.png')}}" alt="">
         </div>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -51,6 +51,8 @@
                 Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
                 Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
             </p>
+            <a href="#"> Saiba Mais </a>
+
         </div>
     </div>
 
@@ -64,7 +66,25 @@
                 Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
                 Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
             </p>
+            <a href="#"> Saiba Mais </a>
         </div>
+    </div>
+</section>
+
+
+<section class="produtos">
+    <h2> Conheça nossos produtos</h2>
+    <div class="card-one">
+        <!-- <img src="{{asset('assets/imagemProduto-1.png')}}" alt=""> -->
+        1
+    </div>
+    <div class="card-two">
+        <!-- <img src="{{asset('assets/designecologist-hWhkVavh-EQ-unsplash.png')}}" alt=""> -->
+        2
+
+    </div>
+    <div class="card-trhe">
+3
     </div>
 </section>
 
