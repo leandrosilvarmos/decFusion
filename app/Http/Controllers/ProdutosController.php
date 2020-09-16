@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Produtos;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
@@ -14,6 +15,12 @@ class ProdutosController extends Controller
     public function index()
     {
         //
+
+         return view('admin.produtos.index');
+        /*
+        Codigo da API GET
+        return response()->json(Produtos::all());
+        */
     }
 
     /**
@@ -24,6 +31,9 @@ class ProdutosController extends Controller
     public function create()
     {
         //
+        return view('admin.produtos.create');
+
+
     }
 
     /**
@@ -34,7 +44,9 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      $produtos = Produtos::create($request->all());
+      return response()->json($produtos);
     }
 
     /**
@@ -46,6 +58,8 @@ class ProdutosController extends Controller
     public function show($id)
     {
         //
+        return response()->json(Produtos::find($id));
+
     }
 
     /**

@@ -28,9 +28,6 @@
     <link rel="stylesheet" href="{{ asset('/css/admin/style.css') }}">
 
 
-
-
-
 </head>
 
 
@@ -49,7 +46,7 @@
 
 
             <a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="title">Inicio</span></a>
-            <a href="#"><i class="fa fa-cubes" aria-hidden="true"></i><span class="title">Produtos</span></a>
+            <a href="{{route('produtos.index')}}"><i class="fa fa-cubes" aria-hidden="true"></i><span class="title">Produtos</span></a>
             <a href="#"><i class="fa fa-tag" aria-hidden="true"></i><span class="title">Categorias</span></a>
             <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="title">Vendas</span></a>
             <a href="#"><i class="fas fa-sliders-h" aria-hidden="true"></i><span class="title">Perfil</span></a>

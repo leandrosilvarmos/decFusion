@@ -18,12 +18,15 @@ Route::get('/', function () {
 });
 
 
-Route::get('/produtos', function () {
-    return view('admin/produtos/index');
-});
+// Route::get('/produtos', function () {
+//     return view('admin/produtos/index');
+// });
 
 Route::get('/dashboard', function () {
     return view('admin/dashboard/index');
 });
 
+
+
+Route::resource('produtos' , 'ProdutosController');
 
