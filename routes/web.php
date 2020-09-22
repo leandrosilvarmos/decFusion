@@ -22,11 +22,15 @@ Route::get('/', function () {
 //     return view('admin/produtos/index');
 // });
 
-Route::get('/dashboard', function () {
-    return view('admin/dashboard/index');
-});
+// Route::get('/dashboard', function () {
+//     return view('admin/dashboard/index')->name('dashboard');
+// });
+
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 
 
 Route::resource('produtos' , 'ProdutosController');
+Route::resource('categoria' , 'CategoriaController');
 
