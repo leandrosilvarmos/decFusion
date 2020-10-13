@@ -21,5 +21,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 
-Route::post('/produtos' , 'ProdutosController@store');
-Route::get('/produtos' , 'ProdutosController@index');
+Route::post('/produtos' , 'ApiController@produtosCreate');
+Route::get('/produtos' , 'ApiController@produtosIndex');
+Route::get('/produtos/{id}' , 'ApiController@produtosShow');
+
+
+Route::post('/categoria' , 'ApiController@categoriaCreate');
+Route::get('/categoria' , 'ApiController@categoriasIndex');

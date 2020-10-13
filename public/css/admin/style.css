@@ -104,6 +104,7 @@ hr {
     width: 100%;
     min-height: 100vh;
     transition: all 0.5s;
+    overflow: auto;
 }
 
 /* Dashboard */
@@ -137,14 +138,66 @@ hr {
 
 /* Tabelas Informaçoes */
 
-.tables-info{
+.tables-info {
     display: flex;
     flex-wrap: wrap;
     max-width: 1280px;
     height: 100%;
 }
 
-.tables-info div{
-    max-width: 460px;
-    
+.tables-info table {
+    max-width: 560px;
+}
+
+/* Tabela Produtos */
+
+.container td {
+    font-weight: normal;
+    -webkit-box-shadow: 0 2px 2px -2px #e3e8f3;
+    -moz-box-shadow: 0 2px 2px -2px #0E1119;
+    box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container td, .container th {
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+
+.container tr:nth-child(odd) {
+    background-color: #FFFFFE;
+}
+
+/* Background-color of the even rows */
+
+.container tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.container th {
+    background-color: #3A3C42;
+    color: #ffffff;
+}
+
+.container td:first-child {
+    color: #FB667A;
+}
+
+.container tr:hover {
+    background-color: #f3f3f3b2;
+  transition: 0.8s ;
+}
+
+.container td:hover {
+    color: #403E10;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+
+@media (max-width: 800px) {
+    .container td:nth-child(4), .container th:nth-child(4) {
+        display: none;
+    }
 }

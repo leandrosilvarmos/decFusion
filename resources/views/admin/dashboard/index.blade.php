@@ -1,4 +1,4 @@
-@extends('layout.admin')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -62,45 +62,8 @@
 
 <section class="tables-info">
 
-
     <div>
-        <!-- <table id="dtBasicExample" class="table table-striped table-bordered ">
-            <thead>
-                <thead>
-                    <tr>
-                        <th><i class="fas fa-file-signature aria-hidden=" true"></i>Nome</th>
-                        <th scope="col">Cpf</th>
-                        <th><i class="fas fa-mobile-alt" arial-hidden="true"></i> Celular</th>
-                    </tr>
-                </thead>
-            <tbody>
-                <tr>
-                    <td>Tiger Nixon</td>
-                    <td>System Architect</td>
-                    <td>Edinburgh</td>
-
-                </tr>
-                <tr>
-                    <td>Garrett Winters</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-
-                </tr>
-                <tr>
-                    <td>Ashton Cox</td>
-                    <td>Junior Technical Author</td>
-                    <td>San Francisco</td>
-                </tr>
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-
-    <div>
-        <table id="dtBasicExample" class="table table-striped table-bordered ">
+        <table class="table">
             <thead>
                 <tr>
                     <th><i class="fas fa-file-signature aria-hidden=" true"></i>Nome</th>
@@ -109,6 +72,7 @@
                 </tr>
             </thead>
             <tbody>
+            <tbody>
                 <tr>
                     <td>Tiger Nixon</td>
                     <td>System Architect</td>
@@ -129,48 +93,15 @@
 
             </tbody>
 
+            </tbody>
         </table>
 
-    </div> -->
 
 
 </section>
 
 
 
-<div class="mr-4 mt-2">
-    <table class="table">
-        <thead>
-            <tr>
-                <th><i class="fas fa-file-signature aria-hidden=" true"></i>Nome</th>
-                <th scope="col">Cpf</th>
-                <th><i class="fas fa-mobile-alt" arial-hidden="true"></i> Celular</th>
-            </tr>
-        </thead>
-        <tbody>
-        <tbody>
-            <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-
-            </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-            </tr>
-
-        </tbody>
-
-        </tbody>
-    </table>
 
 
-    @endsection
+@endsection

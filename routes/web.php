@@ -34,3 +34,7 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::resource('produtos' , 'ProdutosController');
 Route::resource('categoria' , 'CategoriaController');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

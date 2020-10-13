@@ -9,8 +9,11 @@ class Produtos extends Model
     //
 
     protected $fillable = [
-        'nome' , 'cor' , 'quantidade' , 'preco' , 'modelo' , 'descricao' , 'sku' 
+        'nome' , 'modelo' , 'cor' , 'quantidade' , 'sku' , 'preco' , 'descricao' ,'image' , 'categoria_id'
     ];
 
-    
+    public function categorias()
+    {
+        return $this->belongsTo(Categoria::class, 'categoria_id', 'id');
+    }
 }

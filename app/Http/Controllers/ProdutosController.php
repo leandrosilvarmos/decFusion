@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Categoria;
+use App\Http\Requests\CreateProdutosRequest;
+use App\Http\Requests\EditProdutoRequest;
 use App\Produtos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ProdutosController extends Controller
 {
@@ -16,11 +21,8 @@ class ProdutosController extends Controller
     {
         //
 
-         return view('admin.produtos.index');
-        /*
-        Codigo da API GET
-        return response()->json(Produtos::all());
-        */
+        return view('admin.produtos.index')->with('produtos' , Produtos::all());
+       
     }
 
     /**
@@ -31,9 +33,9 @@ class ProdutosController extends Controller
     public function create()
     {
         //
-        return view('admin.produtos.create');
+        return view('admin.produtos.create')->with('categorias', Categoria::all());
 
-
+        $totalProdutos = DB::table('produtos')->sum('id');
     }
 
     /**
@@ -42,11 +44,18 @@ class ProdutosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateProdutosRequest $request)
     {
 
-      $produtos = Produtos::create($request->all());
-      return response()->json($produtos);
+        $image = $request->image->store('produtos');
+        $produtos = Produtos::create($request->all());
+
+        $produtos->image = $image;
+        $produtos->save();
+
+        session()->flash('success', 'Produto Criado com sucesso');
+
+        return redirect(route('produtos.index'));
     }
 
     /**
@@ -58,8 +67,6 @@ class ProdutosController extends Controller
     public function show($id)
     {
         //
-        return response()->json(Produtos::find($id));
-
     }
 
     /**
@@ -68,9 +75,12 @@ class ProdutosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Produtos $produto)
     {
         //
+        return view('admin.produtos.edit')->with('produtos', $produto)->with('categorias', Categoria::all());
+
+
     }
 
     /**
@@ -80,9 +90,31 @@ class ProdutosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EditProdutoRequest $request, Produtos $produto)
     {
-        //
+        //php artisan 
+
+        $produto->update([
+            'nome'=>$request->nome , 
+            'modelo'=>$request->modelo , 
+            'cor'=>$request->cor , 
+            'categoria_id'=>$request->categoria_id , 
+            'quantidade'=>$request->quantidade , 
+            'sku'=>$request->sku , 
+            'preco'=>$request->preco, 
+            'descricao'=>$request->descricao
+        ]);
+
+        if ($request->image) {
+            Storage::delete($produto->image);
+            $image =  $request->image->store('produto');
+            $produto->image = $image;
+            $produto->save();
+        }
+
+        session()->flash('success', 'Produto Editado com sucesso');
+
+        return redirect(route('produtos.index'));
     }
 
     /**
