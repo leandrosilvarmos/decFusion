@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Categoria;
+use App\Http\Controllers\Controller;
 use App\Produtos;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,6 @@ class ApiController extends Controller
 
     public function produtosIndex()
     {
-
         //Codigo da API GET
         return response()->json(Produtos::all());
     }
@@ -35,5 +35,6 @@ class ApiController extends Controller
     public function categoriasIndex()
     {
         return response()->json(Categoria::all());
+        
     }
 }
