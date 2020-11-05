@@ -13,11 +13,16 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+    }
+
+
     public function index()
     {
         //
         return view('admin.categoria.index');
-
     }
 
     /**
@@ -40,7 +45,7 @@ class CategoriaController extends Controller
      */
     public function store(CreateCategoriaRequest $request)
     {
-        
+
         Categoria::create([
             'nome' => $request->nome,
             'tipo' => $request->tipo

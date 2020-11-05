@@ -27,14 +27,20 @@ Route::get('/', function () {
 // });
 
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
-
-
-Route::resource('produtos' , 'ProdutosController');
-Route::resource('categoria' , 'CategoriaController');
-
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::middleware(['auth' , 'admin'])->group(function () {
+    Route::resource('produtos', 'ProdutosController');
+    Route::resource('categoria', 'CategoriaController');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+});
+
+
+
+
+

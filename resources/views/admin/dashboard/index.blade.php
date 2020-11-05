@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.app')
 
 @section('content')
 
@@ -28,9 +28,8 @@
             </div>
             <div class="row">
                 <div class="col-auto">
-                    <span class="count-numbers">599</span>
-                    <span class="count-name">Instances</span>
-                    <i class="fas fa-calendar"></i>
+                    <span class="count-numbers">
+                    </span>
                 </div>
             </div>
         </div>

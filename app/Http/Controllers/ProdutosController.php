@@ -17,14 +17,20 @@ class ProdutosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('VerifyCategoriasCount')->only(['create', 'store']);
+    }
+
     public function index()
     {
         //
-
-        return view('admin.produtos.index')->with('produtos' , Produtos::all());
-       
+        $produtos = Produtos::get();
+        $produtosCount = $produtos->count();
+        return view('admin.produtos.index')->with('produtos', Produtos::all())->with('produtosCount', $produtosCount);
     }
 
+ 
     /**
      * Show the form for creating a new resource.
      *
@@ -35,7 +41,7 @@ class ProdutosController extends Controller
         //
         return view('admin.produtos.create')->with('categorias', Categoria::all());
 
-        $totalProdutos = DB::table('produtos')->sum('id');
+        // $totalProdutos = DB::table('produtos')->sum('id');
     }
 
     /**
@@ -79,8 +85,6 @@ class ProdutosController extends Controller
     {
         //
         return view('admin.produtos.edit')->with('produtos', $produto)->with('categorias', Categoria::all());
-
-
     }
 
     /**
@@ -95,14 +99,14 @@ class ProdutosController extends Controller
         //php artisan 
 
         $produto->update([
-            'nome'=>$request->nome , 
-            'modelo'=>$request->modelo , 
-            'cor'=>$request->cor , 
-            'categoria_id'=>$request->categoria_id , 
-            'quantidade'=>$request->quantidade , 
-            'sku'=>$request->sku , 
-            'preco'=>$request->preco, 
-            'descricao'=>$request->descricao
+            'nome' => $request->nome,
+            'modelo' => $request->modelo,
+            'cor' => $request->cor,
+            'categoria_id' => $request->categoria_id,
+            'quantidade' => $request->quantidade,
+            'sku' => $request->sku,
+            'preco' => $request->preco,
+            'descricao' => $request->descricao
         ]);
 
         if ($request->image) {

@@ -54,11 +54,6 @@
             <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="title">Profissionais</span></a>
 
         </nav>
-
-
-
-
-
         <section class="content d-flex flex-column">
             <nav class="navbar navbar-expand topbar mb-4 static-top ">
                 <div class="container-fluid">
@@ -79,9 +74,13 @@
                     </form>
 
                     <div class="navbar-nav">
-                        <span>Bem vindo(a)</span>
-                        <a href="{{ route('logout') }}" class="navbar-item nav-link btn-logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> {{ __('Sair') }}
+                        <span>Bem vindo: {{ Auth::user()->name }}</span>
+                   
+                        <a class="navbar-item nav-link btn-logout" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                            {{ __('Sair') }}
                             <i class="fas fa-sign-out-alt"></i>
+
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf

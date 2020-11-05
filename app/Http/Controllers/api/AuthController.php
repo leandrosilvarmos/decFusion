@@ -20,7 +20,7 @@ class AuthController extends Controller
         $credentials = request(['email', 'password']);
 
         if (!$token = auth('api')->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+            return response()->json(['error' => 'Acesso não Autorizado'], 401);
         }
 
         return $this->respondWithToken($token);
@@ -40,7 +40,7 @@ class AuthController extends Controller
     {
         auth()->logout();
 
-        return response()->json(['message' => 'Successfully logged out']);
+        return response()->json(['message' => 'Logoff realizado com sucesso']);
     }
 
 

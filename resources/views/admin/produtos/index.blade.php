@@ -13,10 +13,9 @@
             <div class="row">
                 <div class="col-auto">
                     <span class="count-numbers">
-                      
+                        
+                      {{$produtosCount }}
                     </span>
-                    <span class="count-name">Instances</span>
-                    <i class="fas fa-calendar"></i>
                 </div>
             </div>
         </div>
