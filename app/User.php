@@ -61,4 +61,9 @@ class User extends Authenticatable implements JWTSubject
     public function isAdmin(){
         return $this->role == 'admin';
     }
+
+
+    public function cart(){
+        return $this->hasOne(Carrinho::class);
+    }
 }

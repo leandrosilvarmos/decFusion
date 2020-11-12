@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@show');
+
 
 
 // Route::get('/produtos', function () {
@@ -29,8 +28,16 @@ Route::get('/', function () {
 
 
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::middleware(['auth'])->group(function(){
+    Route::get('/carriho' , 'CarrinhoController@index')->name('carrinho');
+    Route::get('/carriho/{produtos}/store' , 'CarrinhoController@store')->name('carrinho-adicionar');
+    Route::get('/carriho/{produtos}/remove' , 'CarrinhoController@destroy')->name('carrinho-remover');
+
+});
 
 
 Route::middleware(['auth' , 'admin'])->group(function () {

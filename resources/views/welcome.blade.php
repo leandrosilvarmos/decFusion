@@ -79,67 +79,22 @@
         1
     </div>
     <div class="card-two">
-        <!-- <img src="{{asset('assets/designecologist-hWhkVavh-EQ-unsplash.png')}}" alt=""> -->
+        <img src="{{asset('assets/designecologist-hWhkVavh-EQ-unsplash.png')}}" alt="">
         2
 
     </div>
     <div class="card-trhe">
-3
+        3
     </div>
 </section>
 
+<section>
+
+@foreach($produtos as $produto)
+<img src="{{asset('storage/produtos'.$produto->image)}}" alt="">
+<p>{{$produto->name}}</p>
+
+<a href="{{route('carrinho', $produto->id)}}">Comprar</a>
+@endforeach
+</section>
 @endsection
-
-
-<!-- <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style> -->
