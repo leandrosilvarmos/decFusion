@@ -25,6 +25,6 @@ class HomeController extends Controller
     }
 
     public function show(){
-        return view('welcome')->with('produtos', Produtos::all());
+        return view('carrinho')->with('produtos', Produtos::all());
     }
 }

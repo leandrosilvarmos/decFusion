@@ -10,24 +10,25 @@ class CarrinhoController extends Controller
 {
     //
 
-    public function index(Produtos $produtos)
+    public function index()
+    {
+    }
+
+    public function store(Produtos $produto)
     {
         $user = auth()->user();
-        $carinho = Carrinho::updateOrCreate(['user_id', $user->id]);
+        $carinho = Carrinho::updateOrCreate(['user_id' => $user->id]);
 
 
-        if ($carinho->produtos()->where('produtos_id', $produtos->id)->count()) {
-            session()->flash('error', 'O produto (' . $produtos->name . ') Já esta no carrinho');
+        if ($carinho->produtos()->where('produto_id', $produto->id)->count()) {
+            session()->flash('error', 'O produto (' . $produto->name . ') Já esta no carrinho');
         } else {
-            $carinho->produtos()->saveMany([$produtos]);
-            session()->flash('sucess', 'O produto (' . $produtos->name . ') foi adicionado ao carrinho');
+            $carinho->produtos()->saveMany([$produto]);
+            session()->flash('sucess', 'O produto (' . $produto->name . ') foi adicionado ao carrinho');
         }
 
         return redirect()->back();
-    }
-
-    public function store()
-    {
+        
     }
 
     public function destroy()
@@ -36,7 +37,7 @@ class CarrinhoController extends Controller
 
 
 
-    // public function update(Request $request)
+    // public function update(Request $request)x
     // {
     //     if ($request->id and $request->quantity) {
     //         $cart = session()->get('cart');

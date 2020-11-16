@@ -19,19 +19,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('auth/login', 'Api\\AuthController@login');
 
-Route::group(['middleware' => ['apiJwt']] , function(){
-    Route::get('auth/users' , 'Api\\UserController@index');
+Route::group(['middleware' => ['apiJwt']], function () {
+    Route::get('auth/users', 'Api\\UserController@index');
     Route::post('auth/logout', 'Api\\AuthController@logout');
     Route::post('auth/me', 'Api\\AuthController@me');
 
+    Route::post('auth/produtos', 'Api\\ApiController@produtosCreate');
+    Route::get('auth/produtos', 'Api\\ApiController@produtosIndex');
+    Route::get('auth/produtos/{id}', 'Api\\ApiController@produtosShow');
+
+
+    Route::post('auth/categoria', 'Api\\ApiController@categoriaCreate');
+    Route::get('auth/categoria', 'Api\\ApiController@categoriasIndex');
 });
-
-
-
-Route::post('auth/produtos' , 'Api\\ApiController@produtosCreate');
-Route::get('auth/produtos' , 'Api\\ApiController@produtosIndex');
-Route::get('auth/produtos/{id}' , 'Api\\ApiController@produtosShow');
-
-
-Route::post('auth/categoria' , 'Api\\ApiController@categoriaCreate');
-Route::get('auth/categoria' , 'Api\\ApiController@categoriasIndex');

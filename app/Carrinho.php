@@ -8,14 +8,28 @@ class Carrinho extends Model
 {
     //
 
-    protected $fillable = ['usuario_id'];
+    // protected $fillable = ['user_id', 'produto_id', 'quantidade'];
 
-    public function usuario(){
+    protected $fillable = ['user_id'];
+
+    // public function user(){ 
+        
+    //     return $this->belongsTo(User::class);
+    // }
+
+     public function user(){ 
+        
         return $this->hasOne(User::class);
-
     }
 
-    public function produtos(){
+    public function produtos(){ 
+        
         return $this->belongsToMany(Produtos::class);
     }
+
+
+    // public function carrinhoprodutos() { 
+
+    //     return $this->belongsTo(Produtos::class);
+    // }
 }

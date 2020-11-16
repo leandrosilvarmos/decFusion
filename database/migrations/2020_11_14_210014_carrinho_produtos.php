@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCarrinhosTable extends Migration
+class CarrinhoProdutos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateCarrinhosTable extends Migration
      */
     public function up()
     {
-        Schema::create('carrinhos', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id');
+        //
+
+        Schema::create('carrinho_produtos', function (Blueprint $table) {
+            $table->integer('carrinho_id');
+            $table->integer('produto_id');
             $table->timestamps();
-        });
+             });
     }
 
     /**
@@ -27,6 +29,6 @@ class CreateCarrinhosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carrinhos');
+        //
     }
 }

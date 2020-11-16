@@ -90,11 +90,5 @@
 
 <section>
 
-@foreach($produtos as $produto)
-<img src="{{asset('storage/produtos'.$produto->image)}}" alt="">
-<p>{{$produto->name}}</p>
 
-<a href="{{route('carrinho', $produto->id)}}">Comprar</a>
-@endforeach
-</section>
 @endsection

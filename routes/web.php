@@ -13,13 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@show');
 
-
-
-// Route::get('/produtos', function () {
-//     return view('admin/produtos/index');
-// });
 
 // Route::get('/dashboard', function () {
 //     return view('admin/dashboard/index')->name('dashboard');
@@ -30,13 +24,15 @@ Route::get('/', 'HomeController@show');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/carriho' , 'CarrinhoController@index')->name('carrinho');
     Route::get('/carriho/{produtos}/store' , 'CarrinhoController@store')->name('carrinho-adicionar');
     Route::get('/carriho/{produtos}/remove' , 'CarrinhoController@destroy')->name('carrinho-remover');
-
+    Route::get('/carinho', 'HomeController@show');
 });
 
 
