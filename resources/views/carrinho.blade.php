@@ -3,7 +3,7 @@
 @foreach($produtos as $produto)
 
 <li class="list-list-group-item">
-    <img src="{{asset('storage'.$produto->image)}}" alt="">
+    <img src="{{asset('storage/'.$produto->image)}}" alt="">
     <span>
         <p>{{$produto->name}}</p>
     </span>

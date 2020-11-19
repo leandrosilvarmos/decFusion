@@ -63,7 +63,7 @@ class User extends Authenticatable implements JWTSubject
     }
 
 
-    public function carinho(){
-        return $this->hasOne(Carrinho::class);
+    public function carrinho(){
+        return $this->hasMany(Carrinho::class);
     }
 }

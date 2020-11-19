@@ -29,9 +29,9 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->group(function(){
-    Route::get('/carriho' , 'CarrinhoController@index')->name('carrinho');
-    Route::get('/carriho/{produtos}/store' , 'CarrinhoController@store')->name('carrinho-adicionar');
-    Route::get('/carriho/{produtos}/remove' , 'CarrinhoController@destroy')->name('carrinho-remover');
+    Route::get('/carinho/index' , 'CarrinhoController@index')->name('carrinho');
+    Route::get('/carinho/{produtos}/store' , 'CarrinhoController@store')->name('carrinho-adicionar');
+    Route::get('/carinho/{produtos}/remove' , 'CarrinhoController@destroy')->name('carrinho-remover');
     Route::get('/carinho', 'HomeController@show');
 });
 

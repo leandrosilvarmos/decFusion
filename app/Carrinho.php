@@ -10,16 +10,15 @@ class Carrinho extends Model
 
     // protected $fillable = ['user_id', 'produto_id', 'quantidade'];
 
-    protected $fillable = ['user_id'];
+    protected $fillable = ['user_id' , 'produto_id'];
 
-    // public function user(){ 
-        
-    //     return $this->belongsTo(User::class);
-    // }
+    protected $table = 'carrinhos';
+
+   
 
      public function user(){ 
         
-        return $this->hasOne(User::class);
+        return $this->belongsToMany(User::class);
     }
 
     public function produtos(){ 
@@ -28,8 +27,5 @@ class Carrinho extends Model
     }
 
 
-    // public function carrinhoprodutos() { 
 
-    //     return $this->belongsTo(Produtos::class);
-    // }
 }

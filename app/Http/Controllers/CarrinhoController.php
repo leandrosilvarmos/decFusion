@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Carrinho;
 use App\Produtos;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CarrinhoController extends Controller
 {
@@ -12,20 +14,22 @@ class CarrinhoController extends Controller
 
     public function index()
     {
+
+        DB::enableQueryLog();
+        $user = auth()->user();
+        $carrinho = Carrinho::with('produtos')->where(['user_id' => $user->id ])->get();
+        dd(DB::getQueryLog());
+        return view('mostrarcarrinho')->with('carrinhos', $carrinho);
+
     }
 
-    public function store(Produtos $produto)
+    public function store($id)
     {
         $user = auth()->user();
-        $carinho = Carrinho::updateOrCreate(['user_id' => $user->id]);
+        $produto = Produtos::find($id);
+        $carinho = Carrinho::updateOrCreate(['user_id' => $user->id , 'produto_id'=>$produto->id]);
+        session()->flash('success', 'Produto adicionado ao carrinho');
 
-
-        if ($carinho->produtos()->where('produto_id', $produto->id)->count()) {
-            session()->flash('error', 'O produto (' . $produto->name . ') Já esta no carrinho');
-        } else {
-            $carinho->produtos()->saveMany([$produto]);
-            session()->flash('sucess', 'O produto (' . $produto->name . ') foi adicionado ao carrinho');
-        }
 
         return redirect()->back();
         

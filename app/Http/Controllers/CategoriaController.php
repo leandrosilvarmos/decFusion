@@ -22,7 +22,7 @@ class CategoriaController extends Controller
     public function index()
     {
         //
-        return view('admin.categoria.index');
+        return view('admin.categoria.index')->with('categorias' , Categoria::all());
     }
 
     /**
@@ -72,9 +72,11 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Categoria $categoria)
     {
         //
+        return view('admin.categoria.edit')->with('categorias' , $categoria);
+
     }
 
     /**
@@ -84,9 +86,19 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Categoria $categoria)
     {
         //
+        $categoria->update([
+            'nome'=>$request->nome , 
+            'tipo'=>$request->tipo
+        ]);
+
+        $categoria->save();
+
+        session()->flash('success', 'Categoria Editado com sucesso');
+
+        return redirect(route('categoria.index'));
     }
 
     /**
