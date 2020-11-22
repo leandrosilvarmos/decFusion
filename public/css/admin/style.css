@@ -205,15 +205,7 @@ body {
   
   
 
-  .vertical-navbar {
-    width: 220px;
-    background: rgb(247, 245, 245);
-    height: 100%;
-    -webkit-box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
-    position: relative;
-    transition: width 0.3s ease-in-out;
-  }
+
   
   .inner {
     position: relative;
@@ -223,10 +215,13 @@ body {
 
   .sidebar {
     background-color: #FF9717;
-    min-width: 200px;
-    max-width: 200px;
-    transition: 0.6s;
-    transition-property: left;
+    overflow-y: auto;
+    width: 200px;
+    height: 100%;
+    -webkit-box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: width 0.3s ease-in-out;
 }
 
 .sidebar a {
@@ -437,21 +432,12 @@ body {
   
 
   
-  .vertical-navbar a.nav-link.collapsed .lni-chevron-down {
-    transform: rotate(-90deg);
-  }
-  
+
   .nav-item-group-header {
     font-size: 12px;
   }
   
-  .vertical-navbar li.nav-item {
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .vertical-navbar li.nav-item:hover {
-    transform: translateX(5px);
-  }
+ 
   
   
 

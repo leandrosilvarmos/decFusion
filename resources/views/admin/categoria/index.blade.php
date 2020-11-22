@@ -74,11 +74,9 @@
             <tbody>
                 @foreach($categorias as $categoria)
                 <tr class="text-center">
-                    <td>{{$categoria->id}}</td>
                     <td>{{$categoria->nome}}</td>
                     <td>{{$categoria->tipo}}</td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">Mostrar</a>
                         <a href="{{route('categoria.edit', $categoria->id)}}" class="btn btn-warning btn-sm text-white">Editar</a>
                         <form action="#" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer apagar?')">
                             @csrf

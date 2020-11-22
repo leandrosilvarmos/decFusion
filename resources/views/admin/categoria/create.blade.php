@@ -27,12 +27,6 @@
 
 
 
-
-
-
-
-
-
     <div class="float-right">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
         <a class="btn btn-danger" href="#">Cancelar</a>

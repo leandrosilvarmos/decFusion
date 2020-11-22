@@ -20,7 +20,7 @@
 
     <div class="mb-2 py-2">
         <a class="btn btn-primary" href="{{route('produtos.create')}}">Novo Produto</a>
-        <a class="btn btn-dark" href="#">Lixeira Produtos</a>
+        <a class="btn btn-dark" href="{{route('produtos.trashed')}}">Lixeira Produtos</a>
     </div>
 </div>
 
@@ -81,9 +81,9 @@
                     <td>{{$produto->nome}}</td>
                     <td>{{$produto->sku}}</td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">Mostrar</a>
+                        <a href="{{route('produtos.show', $produto->id)}}" class="btn btn-primary btn-sm">Mostrar</a>
                         <a href="{{route('produtos.edit', $produto->id)}}" class="btn btn-warning btn-sm text-white">Editar</a>
-                        <form action="#" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer apagar?')">
+                        <form action="{{route('produtos.destroy' , $produto->id)}}" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer apagar?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" href="#" class="btn btn-danger btn-sm"> Mover para Lixeira</button>

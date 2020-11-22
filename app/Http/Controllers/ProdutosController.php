@@ -73,6 +73,9 @@ class ProdutosController extends Controller
     public function show($id)
     {
         //
+
+        return view('admin.produtos.show', ['produtos' => Produtos::findOrFail($id)]);
+
     }
 
     /**
@@ -130,5 +133,30 @@ class ProdutosController extends Controller
     public function destroy($id)
     {
         //
+
+        $produtos = Produtos::withTrashed()->where('id', $id)->firstOrFail();
+
+        if ($produtos->trashed()) {
+            Storage::delete($produtos->image);
+            $produtos->forceDelete();
+            session()->flash('success', 'Produto removido com sucesso!');
+        } else {
+            $produtos->delete();
+            session()->flash('success', 'Produto movido para lixeira com sucesso!');
+        }
+        return redirect()->back();
+    }
+
+    public function trashed(Produtos $produtos)
+    {
+        return view('admin.produtos.trashed')->with('produtos', Produtos::onlyTrashed()->get());
+    }
+
+    public function restore($id)
+    {
+        $produtos = Produtos::withTrashed()->where('id', $id)->firstOrFail();
+        $produtos->restore();
+        session()->flash('success', 'Produto ativado com sucesso');
+        return redirect()->back();
     }
 }

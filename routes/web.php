@@ -38,8 +38,11 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['auth' , 'admin'])->group(function () {
     Route::resource('produtos', 'ProdutosController');
+    Route::get('trashed.produtos', 'ProdutosController@trashed')->name('produtos.trashed');
+    Route::put('restore.produtos/{produtos}', 'ProdutosController@restore')->name('produtos.restore');
     Route::resource('categoria', 'CategoriaController');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
 
 });
 
