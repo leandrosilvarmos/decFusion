@@ -24,6 +24,8 @@ class HomeController extends Controller
         return view('admin.dashboard.index');
     }
 
+    
+
     public function show(){
         return view('carrinho')->with('produtos', Produtos::all());
     }

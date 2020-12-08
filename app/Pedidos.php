@@ -13,12 +13,12 @@ class Pedidos extends Model
     // usuário dono do pedido
     public function user(){
 
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class , 'user_id');
 
     }
 
 
-    public function pedidos() {
+    public function pedidosItens() {
 
         return $this->hasMany(Produtos::class);
     }

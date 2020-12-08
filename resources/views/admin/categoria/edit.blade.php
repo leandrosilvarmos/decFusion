@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-<form action="#" method="POST">
+<form action="{{route('categoria.update' , $categorias->id)}}" method="POST">
     @csrf
     @method('PUT')
     <div class="row">
@@ -9,7 +9,6 @@
             <input type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{$categorias->nome}}" placeholder="Categoria">
             <small><span class="text-danger">{{ $errors->first('nome') }}</span></small>
         </div>
-
 
 
         <div class="form-group col-md-5">
@@ -26,7 +25,7 @@
 
 
     <div class="float-right">
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="submit" class="btn btn-success">Salvar</button>
         <a class="btn btn-danger" href="#">Cancelar</a>
     </div>
 </form>

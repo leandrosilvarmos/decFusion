@@ -18,8 +18,8 @@ class DashboardController extends Controller
 
 
         return view('admin.dashboard.index')->with('users' , User::all())->with('usersCount' , $usersCount);
-
-   
         
     }
+
+  
 }

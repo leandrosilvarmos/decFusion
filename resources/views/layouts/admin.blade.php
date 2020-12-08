@@ -54,7 +54,6 @@
                             </div>
                         </div>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-anim mr-2">
-                            <a class="dropdown-item" href="#">Edit Profile</a>
                             <a class="navbar-item nav-link btn-logout dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); 
             document.getElementById('logout-form').submit();">
                                 {{ ('Sair') }}
@@ -74,31 +73,35 @@
     <section class="wrap-whole d-flex">
         <div class="inner">
             <section class="vertical-navbar p-3 sidebar" id="sidebar">
-                <i id="btnToggleSlimMenu" class="fa fa-list text-green pointer mb-3" role="button"></i>
                 <a class="dashboard-link d-flex align-items-center px-2 py-1 pointer mb-3" href="{{route('dashboard')}}">
                     <i class="fa fa-home" aria-hidden="true"></i>
                     <span class="ml-2 nav-item-text">Inicio</span>
                 </a>
+                <a href="{{route('users.index')}}"><i class="fas fa-user"" aria-hidden="true"></i><span class="title">Administrador</span></a>
                 <a href="{{route('produtos.index')}}"><i class="fa fa-cubes" aria-hidden="true"></i><span class="title">Produtos</span></a>
                 <a href="{{route('categoria.index')}}"><i class="fa fa-tag" aria-hidden="true"></i><span class="title">Categorias</span></a>
                 <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="title">Vendas</span></a>
-                <a href="#"><i class="fas fa-sliders-h" aria-hidden="true"></i><span class="title">Perfil</span></a>
-                <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="title">Clientes</span></a>
-                <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span class="title">Profissionais</span></a>
+                <a href="#"><i class="fa fa-user-tie" aria-hidden="true"></i><span class="title">Profissionais</span></a>
             </section>
         </div>
+
+
+
+
         <section class="main-content container">
+            <section class="container-fluid">
+                @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{session()->get('success')}}
+                </div>
+                @endif
+                @if(session()->has('error'))
+                <div class="alert alert-danger">{{session()->get('error')}}</div>
+                @endif
+            </section>
+
 
             @yield('content')
-            @if(session()->has('success'))
-            <div class="alert alert-success">
-                {{session()->get('success')}}
-            </div>
-            @endif
-            @if(session()->has('error'))
-            <div class="alert alert-danger">{{session()->get('error')}}</div>
-            @endif
-
 
         </section>
     </section>

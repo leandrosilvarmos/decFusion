@@ -22,12 +22,14 @@ class ProdutosController extends Controller
         $this->middleware('VerifyCategoriasCount')->only(['create', 'store']);
     }
 
-    public function index()
+    public function index(Request $request)
     {
         //
-        $produtos = Produtos::get();
+        $produtos = Produtos::orderBy('id' , 'DESC')->paginate(3);
         $produtosCount = $produtos->count();
-        return view('admin.produtos.index')->with('produtos', Produtos::all())->with('produtosCount', $produtosCount);
+        return view('admin.produtos.index' ,  compact('produtos'))->with('i' , ($request->input('page' , 1) - 1 ) * 3)->with('produtosCount', $produtosCount);
+
+        // return view('admin.produtos.index')->with('produtos', Produtos::all())->with('produtosCount', $produtosCount);
     }
 
  

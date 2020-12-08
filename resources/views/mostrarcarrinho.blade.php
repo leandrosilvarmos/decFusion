@@ -7,15 +7,20 @@
             <tr>
                 <th>Produto</th>
                 <th>Preço</th>
-                <th>Remover</th>
+                <th>Ações</th>
+                <!-- @if(count($carrinhos) > 0 )
+                <th class="text-center" @if( Request::path()=='trashed-carrinho' ) colspan="2" @else colspan="3" @endif>Ações</th>
+                @endif -->
             </tr>
         </thead>
         <tbody>
             @foreach($carrinhos as $carrinho)
             <tr>
-                <td>{{ $carrinho->produtos }}</td>
-                <td>{{ $carrinho->produtos}}</td>
-                <td><a href="#" class="btn btn-danger btn-sm">Remover</a></td>
+                <td>{{$carrinho->produto->nome}}</td>
+                <td>{{$carrinho->produto->preco}}</td>
+                <td><a class="btn btn-dark" href="#">Remover Produto</a>
+                </td>
+
             </tr>
             @endforeach
         </tbody>

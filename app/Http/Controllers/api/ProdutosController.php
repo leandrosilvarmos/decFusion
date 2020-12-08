@@ -53,4 +53,10 @@ class ProdutosController extends Controller
 
     }
 
+
+    public function produtosCategoria($id_categoria){
+        $produtos = Produtos::all()->where('categoria_id' , '=' , $id_categoria)->sortByDesc('id');
+        return response()->json($produtos);
+    }
+
 }

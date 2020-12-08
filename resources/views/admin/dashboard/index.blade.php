@@ -16,38 +16,87 @@
 </div>
 
 
-<div class="dashboard-grid">
-    <div class="general-stat-grid card shadow p-4 general-stats">
-        <div class="stat-group d-flex justify-content-around align-items-center">
-            <img src="https://firebasestorage.googleapis.com/v0/b/cloud-functions-playground-01.appspot.com/o/multiple-users-silhouette.svg?alt=media&token=0ad87cb5-875d-4e02-a6ee-018ad54db5b4" class="general-stat-icon" alt="">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h1 class="my-0 font-weight-bold">540</h1>
-                <h6 class="my-0">USERS</h6>
+<section class="statistics">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box">
+                    <i class="fas fa-users fa-fw bg-primary"></i> 
+                    <div class="info">
+                        <h3>3:</h3> <span> Usuarios</span>
+                        <p>cadastrados na base</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="stat-group d-flex justify-content-around align-items-center">
-            <img src="https://firebasestorage.googleapis.com/v0/b/cloud-functions-playground-01.appspot.com/o/store.svg?alt=media&token=50331150-ef50-4f23-bb13-93f7f9608d2a" class="general-stat-icon" alt="">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h1 class="my-0 font-weight-bold">145</h1>
-                <h6 class="my-0">STORES</h6>
+            <div class="col-md-4">
+                <div class="box">
+                    <i class="fa fa-caret-up fa-fw danger bg-primary"></i> 
+                    <div class="info">
+                        <h3>Produto</h3> <span> </span>
+                        <p>Mais Vendido</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="stat-group d-flex justify-content-around align-items-center">
-            <img src="https://firebasestorage.googleapis.com/v0/b/cloud-functions-playground-01.appspot.com/o/man-painting.svg?alt=media&token=27104735-f8a6-499b-832b-6df3d0d9cd79" class="general-stat-icon" alt="">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h1 class="my-0 font-weight-bold">184</h1>
-                <h6 class="my-0">PAINTERS</h6>
-            </div>
-        </div>
-        <div class="stat-group d-flex justify-content-around align-items-center">
-            <img src="https://firebasestorage.googleapis.com/v0/b/cloud-functions-playground-01.appspot.com/o/calendar.svg?alt=media&token=56beee02-dfd9-4774-83b1-617be486e8d9" class="general-stat-icon" alt="">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <h1 class="my-0 font-weight-bold">130</h1>
-                <h6 class="my-0">BOOKINGS</h6>
+            <div class="col-md-4">
+                <div class="box">
+                    <i class="far fa-money-bill-alt fa-fw success bg-primary"></i> 
+
+                    <div class="info">
+                        <h3>Montante</h3>
+                        <p>valor de vendas</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+
+            <div class="card shadow dispatched-orders mt-4">
+                <h6 class="stat-title font-weight-bold">Vendas</h6>
+                <div class="table-responsive">
+                    <table class="table orders-table">
+                        <thead>
+                            <tr class="text-uppercase">
+                                <th>Id</th>
+                                <th>Cliente</th>
+                                <th>Data</th>
+                                <th>Calor</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            <tr>
+                                <td>Dallas Oak Dining Chair</td>
+                                <td>20</td>
+                                <td>$1,342</td>
+                            </tr>
+
+                            <tr>
+                                <td>Benmore Glass Coffee Table</td>
+                                <td>18</td>
+                                <td>$1,550</td>
+                            </tr>
+
+                            <tr>
+                                <td>Aoraki Leather Sofa</td>
+                                <td>15</td>
+                                <td>$4,170</td>
+                            </tr>
+
+                            <tr>
+                                <td>Bali Outdoor Wicker Chair</td>
+                                <td>25</td>
+                                <td>$2,974</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
 
 
 

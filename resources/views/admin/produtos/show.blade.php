@@ -47,7 +47,7 @@
                 <textarea class="form-control bg-light" type="text" rows="3" placeholder="{{$produtos->descricao}}" readonly></textarea>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-2 container py-2">
             <img class="imagem-produto" src="{{asset('storage/'.$produtos->image)}}" alt="Imagem do produto">
         </div>
     </div>

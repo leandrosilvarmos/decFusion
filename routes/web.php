@@ -26,13 +26,14 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/carinho/index' , 'CarrinhoController@index')->name('carrinho');
     Route::get('/carinho/{produtos}/store' , 'CarrinhoController@store')->name('carrinho-adicionar');
     Route::get('/carinho/{produtos}/remove' , 'CarrinhoController@destroy')->name('carrinho-remover');
     Route::get('/carinho', 'HomeController@show');
+
 });
 
 
@@ -42,6 +43,10 @@ Route::middleware(['auth' , 'admin'])->group(function () {
     Route::put('restore.produtos/{produtos}', 'ProdutosController@restore')->name('produtos.restore');
     Route::resource('categoria', 'CategoriaController');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('users', 'UsersController@index')->name('users.index');
+    Route::get('user/perfil', 'DashboardController@edit')->name('perfil.edit');
+    Route::put('user/perfil', 'UsersController@update')->name('perfil.update');
+
 
 
 });

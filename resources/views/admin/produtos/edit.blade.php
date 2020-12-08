@@ -68,7 +68,7 @@
 
 
     <div class="float-right">
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="submit" class="btn btn-success">Salvar</button>
         <a class="btn btn-danger" href="{{route('produtos.index')}}">Cancelar</a>
     </div>
 </form>

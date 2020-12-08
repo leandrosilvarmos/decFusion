@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="content">
                     <h2>Produtos</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                    <p> Realizar o cadastro de produtos, é acompanhar os produtos cadastrados, mais vendidos e quantidade em estoque.</p>
                 </div>
             </div>
         </div>
@@ -17,7 +17,6 @@
 </div>
 
 <div class="container-fluid mt-3">
-
     <div class="mb-2 py-2">
         <a class="btn btn-primary" href="{{route('produtos.create')}}">Novo Produto</a>
         <a class="btn btn-dark" href="{{route('produtos.trashed')}}">Lixeira Produtos</a>
@@ -38,16 +37,17 @@
             </div>
             <div class="col-md-4">
                 <div class="box">
-                    <i class="fa fa-file fa-fw danger"></i>
+                    <i class="fa fa-caret-up fa-fw danger bg-primary"></i>
                     <div class="info">
-                        <h3>34</h3> <span> </span>
-                        <p>Produto Mais Vendido</p>
+                        <h3>Produto</h3> <span> </span>
+                        <p>Mais Vendido</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="box">
-                    <i class="fa fa-users fa-fw success"></i>
+                    <i class="fa fa-exclamation-triangle fa-fw success bg-danger"></i>
+
                     <div class="info">
                         <h3>Produto</h3>
                         <p>Menor quantidade em estoque</p>
@@ -68,22 +68,22 @@
         <table class="table orders-table">
             <thead>
                 <tr class="text-uppercase">
-                    <th scoope="col">Id</th>
-                    <th scope="col">Nome Produto</th>
-                    <th scope="col">Sku</th>
-                    <th scope="col">Ações</th>
+                    <th>Id</th>
+                    <th>Nome Produto</th>
+                    <th>Sku</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($produtos as $produto)
-                <tr class="text-center">
+                <tr>
                     <td>{{$produto->id}}</td>
                     <td>{{$produto->nome}}</td>
                     <td>{{$produto->sku}}</td>
                     <td>
                         <a href="{{route('produtos.show', $produto->id)}}" class="btn btn-primary btn-sm">Mostrar</a>
                         <a href="{{route('produtos.edit', $produto->id)}}" class="btn btn-warning btn-sm text-white">Editar</a>
-                        <form action="{{route('produtos.destroy' , $produto->id)}}" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer apagar?')">
+                        <form action="{{route('produtos.destroy' , $produto->id)}}" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer mover pra lixeira?')">
                             @csrf
                             @method('DELETE')
                             <button type="submit" href="#" class="btn btn-danger btn-sm"> Mover para Lixeira</button>
@@ -95,6 +95,8 @@
                 @endforeach
             </tbody>
         </table>
+        {{$produtos->links()}}
+
     </div>
 </div>
 

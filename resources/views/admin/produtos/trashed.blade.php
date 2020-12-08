@@ -35,13 +35,13 @@
                         <form action="{{route('produtos.destroy' , $produto->id)}}" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer apagar?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" href="#" class="btn alert-secondary btn-sm"> Excluir</button>
+                            <button type="submit" href="#" class="btn bg-danger btn-sm"> Excluir</button>
                         </form>
 
                         <form action="{{route('produtos.restore' , $produto->id)}}" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que deseja reativar o produto?')">
                             @csrf
                             @method('PUT')
-                            <button type="submit" href="#" class="btn btn-warning btn-sm"> Reativar</button>
+                            <button type="submit" href="#" class="btn btn-success"> Reativar</button>
                         </form>
 
                     </td>

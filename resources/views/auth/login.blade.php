@@ -4,7 +4,7 @@
 
 
 <head>
-    <link href="{{ asset('css/web/loginandregister.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/web/login.css') }}" rel="stylesheet">
 </head>
 <div class="login container" id="container">
 
@@ -12,12 +12,13 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <h1> Realizar Login</h1>
+            <span>atravês do facebook ou Google+, para acompanhar os seus pedidos.</span>
+
             <div class="social-container">
                 <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <span>or use your email for registration</span>
+            <span>Ou informando seu e-mail e senha!</span>
             <div>
                 <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
@@ -46,8 +47,8 @@
         <div class="overlay">
             <div class="overlay-panel overlay-right">
                 <h1>Ainda não possui conta</h1>
-                <p>Enter your personal details and start journey with us</p>
-                <button class="ghost" id="signUp"><a href="{{route('register')}}">Cadastre-sess</a></button>
+                <p>Se ainda não possui uma conta em nossa loja, realize seu cadastro e aproveite todos os beneficios que temos para vocês . E facil e rapido somente com seu nome e email voce realiza seu cadastro. Venha conhecer nossos produtos e servicos!</p>
+                <button class="ghost" id="signUp"><a href="{{route('register')}}">Cadastre-se</a></button>
             </div>
         </div>
     </div>

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Carrinho extends Model
 {
     //
+    
 
     // protected $fillable = ['user_id', 'produto_id', 'quantidade'];
 
@@ -18,12 +19,12 @@ class Carrinho extends Model
 
      public function user(){ 
         
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class , 'user_id');
     }
 
-    public function produtos(){ 
+    public function produto(){ 
         
-        return $this->belongsToMany(Produtos::class);
+        return $this->belongsTo(Produtos::class , 'produto_id');
     }
 
 

@@ -15,7 +15,9 @@ class CategoriaController extends Controller
     public function index()
     {
         //
-        return view('admin.categoria.index')->with('categorias' , Categoria::all());
+        $categorias =  Categoria::get();
+        $categoriasCount = $categorias->count();
+        return view('admin.categoria.index')->with('categorias' , Categoria::all())->with('categoriasCount' , $categoriasCount);
     }
 
  
@@ -46,20 +48,25 @@ class CategoriaController extends Controller
     }
 
 
-    public function edit(Categoria $categoria)
+    public function edit($id)
     {
-        
+        $categoria = Categoria::find($id);
         return view('admin.categoria.edit')->with('categorias' , $categoria);
+
 
 
     }
 
     public function update(EditCategoriaRequest $request, Categoria $categoria)
     {
+
         $categoria->update([
             'nome' => $request->nome,
             'tipo' => $request->tipo
+            
         ]);
+
+        $categoria->save();
 
         session()->flash('success', 'Categoria alterada  com sucesso');
 

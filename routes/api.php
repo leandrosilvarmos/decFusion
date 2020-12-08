@@ -30,6 +30,7 @@ Route::group(['middleware' => ['apiJwt']], function () {
 // Rotas de produtos
 Route::post('/produtos', 'Api\\produtosController@produtosCreate');
 Route::get('/produtos', 'Api\\produtosController@produtosIndex');
+Route::get('/categoria_produtos/{id_categoria}', 'Api\\produtosController@produtosCategoria');
 Route::get('/produtos/{id}', 'Api\\produtosController@produtosShow');
 Route::delete('/produtos/{id}', 'Api\\produtosController@produtosDestroy');
 Route::put('/produtos/{id}', 'Api\\produtosController@produtosUpdate');
@@ -41,3 +42,8 @@ Route::get('/categoria', 'Api\\CategoriaController@categoriasIndex');
 Route::get('/categoria/{id}', 'Api\\CategoriaController@categoriasShow');
 Route::delete('/categoria/{id}', 'Api\\CategoriaController@categoriasDestroy');
 Route::put('/categoria/{id}', 'Api\\CategoriaController@categoriasUpdate');
+
+
+// Carrinhos
+Route::post('/cart', 'Api\\CarinhoController@store');
+Route::get('/cart', 'Api\\CarinhoController@carinho');

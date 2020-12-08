@@ -214,14 +214,21 @@ body {
 
 
   .sidebar {
-    background-color: #FF9717;
-    overflow-y: auto;
+  
+
+    z-index: 1;
+    position: fixed;
+    top: 40px;
+    left: 0px;
     width: 200px;
-    height: 100%;
+    bottom: 0px;
+    background-color: #FF9717;
     -webkit-box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
-    position: relative;
     transition: width 0.3s ease-in-out;
+    overflow: auto;
+    overflow-x: hidden;
+    padding-bottom: 30px;
 }
 
 .sidebar a {
@@ -281,11 +288,11 @@ body {
 
 
   .main-content {
-    overflow-y: auto;
-    flex-grow: 1;
     position: relative;
     padding: 0.5rem;
     margin-top:5%;
+    left: 100px;
+    right: -50px;
   }
   
   @media only screen and (max-width: 991px) {
@@ -321,15 +328,14 @@ body {
   }
   
   .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
+flex-wrap: ;
     grid-template-areas:
       "welcome welcome welcome welcome welcome welcome customers-gained customers-gained customers-gained orders-received orders-received orders-received"
       "general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats"
       "session-stats session-stats session-stats session-stats session-stats session-stats revenue-stats revenue-stats revenue-stats revenue-stats revenue-stats revenue-stats"
       "booking-stats booking-stats booking-stats booking-stats sales-stats sales-stats sales-stats sales-stats activity-timeline activity-timeline activity-timeline activity-timeline"
       "dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders ";
-    grid-gap: 15px;
   }
   
 
@@ -494,4 +500,21 @@ body {
     display: inline-block;
   }
   .statistics .box .info p {color:#BBB}
+  
+
+
+  /* Tabela do dashboard */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(161, 161, 161, 0.705);
+  }
+
+
+
+  
+
+
+
   

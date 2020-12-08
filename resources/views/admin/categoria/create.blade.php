@@ -15,8 +15,11 @@
             <select name="tipo" id="" class="form-control">
                 <option value=""> Tipo da categoria</option>
                 <option value="decoracao"> Decoração</option>
-                <option value="escritorio"> Escritorio</option>
-                <option value="casa"> Casa</option>
+                <option value="escritorio"> Utensilios</option>
+                <option value="casa"> Moveis</option>
+                <option value="casa"> Eletrodomestico</option>
+                <option value="casa"> Jardinagem</option>
+                <option value="casa"> Escritorio</option>
             </select>
             <small><span class="text-danger">{{ $errors->first('tipo') }}</span></small>
 
@@ -28,7 +31,7 @@
 
 
     <div class="float-right">
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <button type="submit" class="btn btn-success">Cadastrar</button>
         <a class="btn btn-danger" href="#">Cancelar</a>
     </div>
 </form>

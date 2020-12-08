@@ -15,8 +15,9 @@ class Carrinhos extends Migration
     {
         //
         Schema::create('carrinhos', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->integer('produto_id');
+            $table->id();
+            $table->bigInteger('user_id')->references('id')->on('User')->default(0);
+            $table->integer('produto_id')->references('id')->on('produtos')->default(0);
             $table->timestamps();
              });
     }

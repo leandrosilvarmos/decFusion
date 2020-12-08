@@ -1,0 +1,56 @@
+@extends('layouts.admin')
+
+@section('content')
+
+<div class="welcome">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content">
+                    <h2> Admnistrador</h2>
+                    <p> Acompanhamento de dados administrativo da empresa, é tambem a visualização de todos os clientes 
+                        cadastros na plataforma. Acesso ao seu perfil de usuario.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-3">
+    <div class="mb-2 py-2">
+        <a class="btn btn-primary" href="# ">Meu Perfil</a>
+    </div>
+</div>
+
+<div class="card shadow dispatched-orders mt-4">
+    <h6 class="stat-title font-weight-bold"></h6>
+    <div class="table-responsive">
+        <table class="table orders-table">
+            <thead>
+                <tr class="text-uppercase">
+                    <th>Nome Usuario</th>
+                    <th>Email</th>
+                    <th>Cliente desde</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($users as $user)
+                <tr>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->created_at}}</td>
+                  
+                </tr>
+
+                @endforeach
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+@endsection

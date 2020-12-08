@@ -18,7 +18,7 @@
 
 <div class="container-fluid mt-3">
     <div class="mb-2 py-2">
-        <a class="btn btn-danger" href="{{route('categoria.create')}}">Cadastrar</a>
+        <a class="btn btn-primary" href="{{route('categoria.create')}}">Nova Categoria</a>
         <a class="btn btn-dark" href="#">Lixeira Categorias</a>
     </div>
 </div>
@@ -30,31 +30,23 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="box">
-                    <i class="fa fa-envelope fa-fw bg-primary"></i>
+                    <i class="fas fa-tags fa-fw bg-primary"></i>
                     <div class="info">
-                        <h3>x</h3> <span> Categorias</span>
+                        <h3>{{$categoriasCount}}:</h3> <span> Categorias</span>
                         <p>cadastrados na base</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="box">
-                    <i class="fa fa-file fa-fw danger"></i>
+                <i class="fa fa-caret-up fa-fw danger bg-primary"></i>
                     <div class="info">
-                        <h3>34</h3> <span> </span>
-                        <p>Categoria Mais Vendido</p>
+                        <h3>Categoria</h3> <span> </span>
+                        <p>Mais Vendida</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box">
-                    <i class="fa fa-users fa-fw success"></i>
-                    <div class="info">
-                        <h3>Lorem Lorem  </h3>
-                        <p>Mollitia illum eligendi quod natus</p>
-                    </div>
-                </div>
-            </div>
+         
         </div>
     </div>
 </section>
@@ -66,14 +58,16 @@
         <table class="table orders-table">
             <thead>
                 <tr class="text-uppercase">
-                    <th scoope="col">Id</th>
-                    <th scope="col">Nome Categoria</th>
-                    <th scope="col">Tipo</th>
+                    <th>Id</th>
+                    <th>Nome Categoria</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($categorias as $categoria)
-                <tr class="text-center">
+                <tr>
+                    <td>{{$categoria->id}}</td>
                     <td>{{$categoria->nome}}</td>
                     <td>{{$categoria->tipo}}</td>
                     <td>
