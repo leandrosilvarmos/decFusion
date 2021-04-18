@@ -13,7 +13,7 @@ h1{
     text-align: center;
     padding: 5% 0;
     font-size: 85px;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Overlock', cursive;    
     color: #3A3C42;
     
 }
@@ -28,7 +28,7 @@ li , a  {
     font-weight: 500;
     font-size: 18px;
     text-decoration: none;
-    font-family: 'Bellota', cursive;
+    font-family: 'Quicksand', sans-serif;
 }
 
 header{
@@ -67,95 +67,9 @@ a{
 }
 
 
-.btn-links{
-    padding: 3px 10px;
-    background-color: #3A3C42;
-    opacity: 0.6;
-    border: 1px solid #FFFFFE;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-
-}
 
 
 
-a.active , nav a:hover{
-    background: #3A3C42;
-    opacity: 0.8;
-    transition: .5s;
-    border-radius: 3px;
-    padding: 5px;
-    
-}
-
-ul li a:hover{
-    text-decoration: none;
-    list-style: none;
-    color: #FFFFFE;
-}
-
-
-/* height: 30vh;
-width: 100%;
-background-image: url("../../assets/Grupo\ 1.jpg"); */
-
-/* nav{
-height: 30vh;
-width: 100%;
-background-image: url("../../assets/Grupo\ 1.jpg");
-display: flex;
-
-}
-
-label.logo{
-    color: honeydew;
-    font-size: 35px;
-    padding: 0 100px;
-    font-weight: bold;
-}
-
-nav ul li{
-    margin-right: 20px;
-}
-
-nav ul li {
-    display: inline-block;
-    margin:0 5px;   
-}
-
-nav ul li a{
-    font-size: 18px;
-    color: black;
-    border-radius: 3px;
-    
-}
-
-a.active , a:hover{
-    background: brown;
-    transition: .5s;
-    
-}
-
-ul li a:hover{
-    text-decoration: none;
-    list-style: none;
-    color: blanchedalmond;
-}
-
-.checkbtn{
-    font-size: 30px;
-    color: black;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-}
-
-#checkbox{
-    display: none;
-} */
 
 @media(max-width: 952px){
     label.logo{

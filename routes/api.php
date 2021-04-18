@@ -20,11 +20,21 @@ use Illuminate\Support\Facades\Route;
 Route::post('auth/login', 'Api\\AuthController@login');
 
 Route::group(['middleware' => ['apiJwt']], function () {
+
+    // Usuarios Auth
     Route::get('auth/users', 'Api\\UserController@index');
     Route::post('auth/logout', 'Api\\AuthController@logout');
     Route::post('auth/me', 'Api\\AuthController@me');
+
+    //Categorias Auth
     Route::post('auth/categoria', 'Api\\ApiController@categoriaCreate');
     Route::get('auth/categoria', 'Api\\ApiController@categoriasIndex');
+
+    // Carrinhos
+    Route::post('/cart', 'Api\\APICarinhoController@store');
+    Route::get('/cart', 'Api\\APICarinhoController@cart');
+    Route::get('/cartIndex', 'Api\\APICarinhoController@index');
+
 });
 
 // Rotas de produtos
@@ -44,6 +54,4 @@ Route::delete('/categoria/{id}', 'Api\\CategoriaController@categoriasDestroy');
 Route::put('/categoria/{id}', 'Api\\CategoriaController@categoriasUpdate');
 
 
-// Carrinhos
-Route::post('/cart', 'Api\\CarinhoController@store');
-Route::get('/cart', 'Api\\CarinhoController@carinho');
+

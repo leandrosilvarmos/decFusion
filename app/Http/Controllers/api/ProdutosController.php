@@ -38,6 +38,10 @@ class ProdutosController extends Controller
         $produtos->modelo = $request->input('modelo');
         $produtos->descricao = $request->input('descricao');
         $produtos->sku = $request->input('sku');
+        $produtos->dimensao = $request->input('dimensao');
+        $produtos->peso = $request->input('preco');
+
+
 
         return response()->json($produtos);
     }

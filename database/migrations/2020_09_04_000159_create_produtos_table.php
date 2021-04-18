@@ -24,6 +24,8 @@ class CreateProdutosTable extends Migration
             $table->text('descricao');
             $table->integer('sku');
             $table->text('image');
+            $table->string('dimensao');
+            $table->double('peso');
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
             $table->timestamps();
         });

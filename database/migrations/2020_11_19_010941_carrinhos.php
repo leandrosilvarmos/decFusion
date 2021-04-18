@@ -16,10 +16,15 @@ class Carrinhos extends Migration
         //
         Schema::create('carrinhos', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->references('id')->on('User')->default(0);
-            $table->integer('produto_id')->references('id')->on('produtos')->default(0);
+            $table->integer('quantidade');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('produto_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->default(0);
+            $table->foreign('produto_id')->references('id')->on('produtos')->onDelete('cascade')->default(0);   
             $table->timestamps();
              });
+
+          
     }
 
     /**

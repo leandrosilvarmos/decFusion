@@ -12,13 +12,18 @@
 
 
     <!-- Scripts -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="{{ asset('js/app.js') }}"></script>
 
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
 
 
 
@@ -35,27 +40,27 @@
 
     <header>
         <section class="navbar">
-        <div>
-            <img src="" alt="">
-        </div>
-        <nav>
-
             <div>
-                <ul class="nav-links">
-                    <li><a href="#" class="active">Conceito</a></li>
-                    <li><a href="#">Empresa</a></li>
-                    <!-- <li><a href="#">Produtos</a></li>-->
-                    <li><a href="#">Saiba mais</a></li> 
-                </ul>
+                <img src="" alt="">
             </div>
+            <nav>
 
-        </nav>
-        <div>
-            <a href="{{route('login')}}" class="btn-links">Login</a>
-            <a href="{{route('register')}}" class="btn-links">Cadastre-se</a>
-        </div>
+                <div>
+                    <ul class="nav-links">
+                        <li><a href="#" class="active">Conceito</a></li>
+                        <li><a href="#">Empresa</a></li>
+                        <!-- <li><a href="#">Produtos</a></li>-->
+                        <li><a href="#">Saiba mais</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+            <div>
+                <a href="{{ route('login') }}" class="btn-links">Login</a>
+                <a href="{{ route('register') }}" class="btn-links">Cadastre-se</a>
+            </div>
         </section>
-        
+
 
         <h1>
             dacFusion

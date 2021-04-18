@@ -52,6 +52,21 @@
     </div>
 
 
+    <div class="row mt-4 mb-4">
+
+        <div class="form-group col-md-5">
+            <input type="text" class="form-control @error('dimensao') is-invalid @enderror" name="dimensao" value="{{old('dimensao')}}" placeholder="Dimensao do Produto - Tamanho e Altura">
+            <small><span class="text-danger">{{ $errors->first('dimensao') }}</span></small>
+        </div>
+
+
+        <div class="form-group col-md-5">
+            <input type="text" class="form-control @error('peso') is-invalid @enderror" name="peso" placeholder="Peso do Produto">
+            <small><span class="text-danger">{{ $errors->first('peso') }}</span></small>
+        </div>
+    </div>
+
+
     <div class="form-group">
         <textarea class="form-control @error('descricao') is-invalid @enderror" id=" exampleFormControlTextarea1" rows="2" name="descricao"></textarea>
         <small><span class="text-danger">{{ $errors->first('descricao') }}</span></small>

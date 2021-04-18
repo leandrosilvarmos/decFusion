@@ -1,69 +1,6 @@
-body {
-    font-family: "Open Sans", sans-serif;
-    background: rgb(246, 244, 247);
-    /*   overflow-y: hidden; */
-  }
-  
-  body.modal-open {
-    padding-right: 0px !important;
-  }
-  
-  main {
-    margin-top: 135px;
-  }
-  
-  body * {
-    font-family: inherit;
-  }
-  
-  label.required::after {
-    content: " *";
-    color: red;
-    font-weight: bold;
-  }
-  
-  .multiselect__tag,
-  .multiselect__option--highlight,
-  .multiselect__option--highlight::after,
-  .multiselect__tag-icon:hover {
-    background: #1e91cf !important;
-  }
-  
-  [v-cloak] {
-    display: none;
-  }
-  
-  .modal-content {
-    border-radius: 30px;
-  }
-  
-  .navbar-light {
-    background: #fff;
-  }
-  
-  .raised {
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-  }
-  
-  .border-green {
-    border-bottom: 3px solid #329747;
-  }
-  
-  /*================= HOMEPAGE STYLES START ====================*/
-  .bg-blue {
-    background: #181949;
-  }
-  
-  .text-blue {
-    color: #181949;
-  }
-  
-  .bg-blue-accent {
-    background: rgb(12, 33, 80);
-  }
-  
+/*================= CSS REFERENTE AO MENU SUPERIOR COM A SEPARAÇÃO ====================*/
+
+
   .bg-green {
     background: #329747;
   }
@@ -72,51 +9,20 @@ body {
     color: #329747;
   }
   
-  .pb-thin {
-    padding-bottom: 2px;
-  }
+
   
   .seperator {
     height: 3px;
     margin-top: 2px;
   }
   
-  .icon-wrapper {
-    border: 2px solid white;
-    border-radius: 50%;
-    display: flex;
-    height: 30px;
-    width: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .icon-wrapper.dark {
-    border: 2px solid #000;
-    background: #000;
-    color: #fff;
-  }
+ 
   
   .pointer {
     cursor: pointer;
   }
   
-  .nav-item .nav-link {
-    color: #000 !important;
-  }
-  
-  .nav-item .nav-link:hover {
-    color: #383838 !important;
-  }
-  
-  .nav-item.active {
-    border-bottom: 3px solid #329747;
-  }
-  
-  .divider {
-    height: 15px;
-    border-right: 2px solid #383838;
-  }
+ 
   
   .nav-login {
     position: relative;
@@ -128,94 +34,11 @@ body {
 
 
 
-  @media only screen and (max-width: 991px) {
-    .rotate90 {
-      transform: rotate(90deg);
-    }
-  }
-  
-  @media only screen and (max-width: 767px) {
-    main {
-      margin-top: 100px;
-    }
-    .contact-banner {
-      font-size: 11px;
-    }
-    .brand-logo {
-      width: 75%;
-      height: 75%;
-    }
-  
-    .step-label {
-      text-align: center;
-    }
-  
-    .swiper-container {
-      width: 100%;
-      height: 600px;
-    }
-  
-    .font-sm-mobile {
-      font-size: 13px;
-    }
-  
-    .banner {
-      padding: 30px;
-    }
-  }
-  
+  /*================= CSS REFERENTE AO MENU LATERAL ====================*/
 
-  
-  @media only screen and (min-width: 768px) {
-    .get-it-painted {
-      padding: 40px;
-    }
-  
-    .get-it-painted-title {
-      text-align: justify;
-      text-align-last: center;
-    }
-  }
-  
-  @media only screen and (min-width: 769px) {
-    .navbar-brand {
-      margin-left: 50px;
-    }
-  
-    .get-it-painted {
-      transform: translateX(170px);
-    }
-  
-    .about-us {
-      border-left: 3px solid #329747;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) {
-    .get-it-painted {
-      transform: translateX(240px);
-    }
-  }
-  
-  @media only screen and (min-width: 1200px) {
-    .navbar-brand {
-      margin-left: 100px;
-    }
-  }
-  
-  
-
-
-  
-  .inner {
-    position: relative;
-    height: auto;
-  }
 
 
   .sidebar {
-  
-
     z-index: 1;
     position: fixed;
     top: 40px;
@@ -252,19 +75,11 @@ body {
 
 .sidebar i {
     padding: 0 10px;
+    color: #141c3a;
+    font-size: 1.2rem;
 }
 
-/* Responsivo */
 
-@media(max-widht: 768px) {
-    #sidebar {
-        margin-left: -200px;
-        background-color: blue;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-}
   
 /* Welcome - Mensagem */
 

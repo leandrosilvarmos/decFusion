@@ -7,41 +7,53 @@ use App\Http\Controllers\Controller;
 use App\Produtos;
 use Illuminate\Http\Request;
 
+use function GuzzleHttp\Promise\all;
+
 class APICarinhoController extends Controller
 {
-    //
-    public function carinho(){
+  
 
+
+    public function cart()
+    {
         $user = auth()->user();
-        $carinho = $user->carinho;
+        // dd($user);
 
-        
+        $carrinho = $user->carrinho;
 
-        if ($carinho > 0) {
+
+        if ($carrinho->count() > 0) {
+
             $produtos = [];
 
-            dd($produtos);
+            foreach ($carrinho as $c) {
 
-            foreach($carinho as $c) {
+                $produto = Produtos::find($c->produto_id);
+                // dd($c);
 
-                $prod = Produtos::all()->find($c->produto_id);
-                array_push($c, $prod);
+                $quantidade = ($c->quantidade);
+                $produto->quantidade = $quantidade;
+                array_push($produtos, $produto);
             }
 
-            return response()->json($produtos);
+            //dd($products);
 
-        }else {
+            return response()->json(['produtos' => $produtos]);
 
-            return response()->json(["error" => "Carrinho etá Vazio"]);
+        } else {
+
+            return response()->json(["error" => "Não há produtos no carrinho"], 400);
         }
     }
+
+
     /**
-     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index(){
-    
+            return response()->json(Carrinho::all());
+        
     }
 
     /**
@@ -69,7 +81,7 @@ class APICarinhoController extends Controller
 
                 $checkCarinho->update(['quantidade' => $quantidade]);
 
-                return response()->json(["success" => "Produto adiconado ao carrinho"]);
+                return response()->json(["success" => "Mais uma unidade adicionada ao carrinho"]);
 
             } else { 
 
@@ -85,10 +97,15 @@ class APICarinhoController extends Controller
             } 
         }else { 
 
-            return response()->json(["Error" => "Produto inválido"], 400);
-        }
+            return response()->json([
+                "error" => "Produto não cadastrado na base",
+                "product_id" => "ID Invalido",
+                "mesage" => "Não é possivel adicionar no carrinho"
+            ], 401);        }
         //
     }
+
+  
 
     /**
      * Display the specified resource.

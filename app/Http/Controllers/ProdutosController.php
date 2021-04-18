@@ -111,7 +111,11 @@ class ProdutosController extends Controller
             'quantidade' => $request->quantidade,
             'sku' => $request->sku,
             'preco' => $request->preco,
-            'descricao' => $request->descricao
+            'descricao' => $request->descricao,
+            'dimensao' => $request->dimensao,
+            'peso' => $request->peso
+
+
         ]);
 
         if ($request->image) {
