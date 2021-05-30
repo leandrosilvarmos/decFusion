@@ -1,99 +1,84 @@
 @extends('layouts.web')
 @section('content')
 
-<section class="objetivo">
-    <div class="card">
-        <div class="title">
-            <h2>Objetivo</h2>
-            <img src="{{asset('assets/iconfinder_ideation_3380384.png')}}" alt="">
+<section id="nossos-produtos" class="sc-nossosProds container">
+    <h2>Nossos Produtos</h2>
+
+    <div class="nossoProds-info">
+        <div class="produto">
+            <p>Poltronas</p>
+            <a href="#"><img src="../assets/Poltrona.jpg" alt="Poltronas" /></a>
         </div>
-        <p>
-            Nosso objetivo e facilitar toda a dinamica de interação do comprador com o profissional
-            de decoração ou arquiteto. Entendemos que não somos apenas um E-commerce é precisamos
-            oferecer aõs nossos usuarios, um ambiente o qual ela(a) possa obter qualidade, informação sobre
-            os produtos é auxilio de como adequar nosso produto na sua necessidade.
-        </p>
-    </div>
-
-    <div class="card">
-        <div class="title">
-            <h2>Inovação</h2>
-            <img src="{{asset('assets/mission.png')}}" alt="">
+        <div class="produto">
+            <p>Sofás</p>
+            <a href="#"><img src="../assets/Sofás.jpg" alt="Sofás" /></a>
         </div>
-        <p>
-           Para os nossos clientes uma experiencia unica, a qual ele pode de maneira rapido e simples se 
-           comunicar diretamente com um profissional
-            que ira te auxiliar com toda ajuda necessaria. E para os profissionais da nossa plataforma
-            é um serviço de extrema importancia, onde ele podera demonstrar seu trabalho é fazendo disso uma possivel tenda extra.
-
-
-        </p>
-    </div>
-
-    <div class="card">
-        <div class="title">
-            <h2>Interação</h2>
-            <img src="{{asset('assets/peer-to-peer.png')}}" alt="">
+        <div class="produto">
+            <p>Decorados</p>
+            <a href="#"><img src="../assets/Plantas.jpg" alt="Decorados " /></a>
         </div>
-        <p>
-            A interação de nossos clientes com os profissionais cadastrados na plataforma é realizada de forma 
-            simples e direta, para que toda a burocracia envolvida nesses processos, seja restuturada fazendo com 
-            que ambas as partes se sintam confortaveis e seguraças de trocar informações atraves da nossa plataforma.
-
-        </p>
     </div>
 </section>
 
+<section class="sc-diferenciaisBg">
+    <div class="sc-diferenciais container">
+        <h2>Entenda um pouco mais sobre os diferenciais da nossa empresa.</h2>
 
-<!-- <section class="conceito">
-        <div class="card">
-            <div class="circle">
-                <h2> Cliente</h2>
+        <div class="sc-diferenciais-info">
+            <div class="diferenciais">
+                <span>Consumidores</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia necessitatibus tempora
+                    sunt totam nobis?</p>
             </div>
-            <div class="content">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
-                    Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
-                </p>
-                <a href="#"> Saiba Mais </a>
-
+            <div class="diferenciais">
+                <span>Interação</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia necessitatibus tempora
+                    sunt totam nobis?</p>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="circle">
-                <h2> Profissionais </h2>
-            </div>
-            <div class="content">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit, illo perspiciatis? Distinctio voluptatum quisquam ea laborum amet.
-                    Beatae laudantium et magni quia. Quis ipsum doloribus iusto a. Iure, at optio.
-                </p>
-                <a href="#"> Saiba Mais </a>
+            <div class="diferenciais">
+                <span>Diferencial</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia necessitatibus tempora
+                    sunt totam nobis?</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<section class="sc-nossoApp container">
+    <div class="sc-nossoApp-info">
+        <h3>Baixe nosso App</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit veniam quasi velit repellendus
+            nihil debitis suscipit, in tenetur. Voluptate repellat impedit esse quod neque nesciunt ipsa voluptatem
+            commodi, dolorem temporibus rem est omnis inventore delectus? Aut numquam non maxime?
+        </p>
+    </div>
 
-    <section class="produtos">
-        <h2> Conheça nossos produtos</h2>
-        <div class="card-one">
-            <img src="{{asset('assets/imagemProduto-1.png')}}" alt="">
-            1
+    <img src="../assets/iconPlaystore.jpg" alt="Playstore" />
+</section>
+
+<footer class="footerBg">
+    <div class="footer-container container">
+        <img class="footer-logo" src="../assets/dacfusionWhite.png" alt="Logo" />
+
+        <div class="footer-info">
+            <div class="ftRedes-sociais">
+                <span>Redes Sociais</span>
+                <img src="../assets/facebook.png" alt="redes sociais" />
+                <img src="../assets/instagram.png" alt="redes sociais" />
+            </div>
+            <div class="ftContato">
+                <span>Contato</span>
+                <p>Insira seu e-mail</p>
+                <input type="text" />
+            </div>
+            <div class="ftEndereco">
+                <span>Endereço</span>
+                <p>Avenida Eusébio Stevaux 4007 São Paulo, SP - 047-200</p>
+            </div>
         </div>
-        <div class="card-two">
-            <img src="{{asset('assets/designecologist-hWhkVavh-EQ-unsplash.png')}}" alt="">
-            2
-
-        </div>
-        <div class="card-trhe">
-            3
-        </div>
-    </section>
-
-    <section> -->
+    </div>
+</footer>
 
 
 @endsection

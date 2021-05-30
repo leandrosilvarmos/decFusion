@@ -27,6 +27,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function(){ 
     return view('welcome');})->name('home');
 
+// Rotas das paginas de Clientes
+Route::get('/clientes/create' , 'ClientesController@create')->name('cliente-create');
+
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/carinho/index' , 'CarrinhoController@index')->name('carrinho');

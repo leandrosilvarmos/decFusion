@@ -15,7 +15,9 @@ class CreatePedidosTable extends Migration
     {
         Schema::create('pedidos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id');
+            $table->foreignId('cliente_id');
+            $table->foreignId('profissional_id');
+            $table->decimal('valor_total' ,8, 2);
             $table->timestamps();
         });
     }

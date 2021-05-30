@@ -75,13 +75,22 @@
 
 .sidebar i {
     padding: 0 10px;
-    color: #141c3a;
+    color: #313348;
     font-size: 1.2rem;
 }
 
+ 
+.dashboard-link {
+  color: rgb(31, 31, 31);
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgb(240, 255, 243);
+  -moz-box-shadow: 0px 0px 10px 0px rgb(178, 180, 178);
+  box-shadow: 0px 0px 10px 0px rgb(145, 156, 147);
+  background-color: rgb(87, 87, 87);
+}
 
-  
-/* Welcome - Mensagem */
+
+/*================= WELCOME DASHBOARD MENSAGEM ====================*/
 
 .welcome {
     color: rgb(233, 232, 232);
@@ -92,7 +101,7 @@
     background-color: #313348a8;
     padding: 10px;
     margin-bottom: 1%;
-    border-radius: 3px;
+    border-radius: 2px;
 
   }
 
@@ -110,157 +119,21 @@
     right: -50px;
   }
   
-  @media only screen and (max-width: 991px) {
-    .vertical-navbar {
-      transform: translateX(-100%);
-      position: absolute;
-      padding: 0;
-      transition: all 0.3s ease-in-out;
-      box-shadow: none;
-      z-index: 30;
-    }
-  
-    .vertical-navbar.expanded {
-      transform: translateX(0);
-      left: 0;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      box-shadow: none;
-    }
-  
-    .overlay-main {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.3);
-      z-index: 10;
-      transition: height 0.3s ease-in-out;
-    }
-  }
-  
-  .dashboard-grid {
-    display: flex;
-flex-wrap: ;
-    grid-template-areas:
-      "welcome welcome welcome welcome welcome welcome customers-gained customers-gained customers-gained orders-received orders-received orders-received"
-      "general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats general-stats"
-      "session-stats session-stats session-stats session-stats session-stats session-stats revenue-stats revenue-stats revenue-stats revenue-stats revenue-stats revenue-stats"
-      "booking-stats booking-stats booking-stats booking-stats sales-stats sales-stats sales-stats sales-stats activity-timeline activity-timeline activity-timeline activity-timeline"
-      "dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders dispatched-orders ";
-  }
-  
-
-  
-  @media only screen and (min-width: 768px) {
-    .profile-pic-dashboard {
-      width: 120px;
-      height: 120px;
-    }
-  }
-  
-  @media only screen and (min-width: 992px) {
-    .profile-pic-dashboard {
-      width: auto;
-      height: auto;
-      max-height: 100%;
-    }
-  
-    .welcome-text {
-      letter-spacing: 0.1rem;
-    }
-  }
-  
-
-  .general-stats {
-    grid-area: general-stats;
-  }
- 
-  
-
-  
-  @media only screen and (max-width: 576px) {
-    .dashboard-grid {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "welcome"
-        "customers-gained"
-        "orders-received"
-        "general-stats"
-        "session-stats"
-        "revenue-stats"
-        "booking-stats"
-        "sales-stats"
-        "activity-timeline"
-        "dispatched-orders";
-    }
-  }
-  
 
 
-  
-  @media only screen and (min-width: 992px) {
-    .general-stat-icon {
-      height: 60px;
-    }
-  }
-  
-  .stat-group:not(:last-child):after {
-    content: "";
-    width: 2px;
-    height: 75px;
-    background: #eee;
-  }
-  
-  @media only screen and (max-width: 576px) {
-    .general-stat-grid {
-      grid-template-columns: 1fr;
-      grid-row-gap: 30px;
-    }
-  
-    .general-stat-icon {
-      height: 100px;
-    }
-  
-    .stat-group:not(:last-child):after {
-      content: none;
-    }
-  }
-
-  
   .stat-title {
     margin: 20px;
   }
 
 
-  @media only screen and (min-width: 678px) {
-    .session-stat-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  .dashboard-link {
-    color: rgb(31, 31, 31);
-    border-radius: 3px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgb(240, 255, 243);
-    -moz-box-shadow: 0px 0px 10px 0px rgb(178, 180, 178);
-    box-shadow: 0px 0px 10px 0px rgb(145, 156, 147);
-    background-color: rgb(87, 87, 87);
-  }
-  
+/*================= WELCOME TABELA VENDAS ====================*/
 
-  
 
-  .nav-item-group-header {
-    font-size: 12px;
-  }
-  
- 
-  
-  
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(161, 161, 161, 0.705);
+}
 
   .dispatched-orders table th {
     border-bottom: none;
@@ -282,8 +155,13 @@ flex-wrap: ;
     box-shadow: 0 1px 8px rgba(0,0,0,0.2);
     -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.2);
     -moz-box-shadow: 0 1px 8px rgba(0,0,0,0.2);
+
   }
   
+
+
+
+  /*================= WELCOME ESTATISTICAS  ====================*/
 
   
   /* Start statistics */
@@ -314,17 +192,14 @@ flex-wrap: ;
     margin: 5px 0 5px;
     display: inline-block;
   }
-  .statistics .box .info p {color:#BBB}
+  .statistics .box .info p {
+    color:#BBB
+  }
   
 
 
-  /* Tabela do dashboard */
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(161, 161, 161, 0.705);
-  }
+
 
 
 

@@ -6,23 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carrinho extends Model
 {
-    //
     
 
-    // protected $fillable = ['user_id', 'produto_id', 'quantidade'];
+    protected $fillable = ['cliente_id', 'profissional_id' , 'produto_id' , 'quantidade'];
 
-    protected $fillable = ['user_id' , 'produto_id' , 'quantidade'];
+  
 
-    // protected $table = 'carrinhos';
-
-   
-
-     public function user(){ 
+    public function Cliente(){
+        return $this->belongsTo(Cliente::class , 'cliente_id');
         
-        return $this->belongsTo(User::class , 'user_id');
+    }
 
-        // return $this->belongsTo(User::class);
 
+    public function Profissiona(){
+        return $this->belongsTo(Profissional::class,  'profissional_id');
     }
 
     public function produto(){ 
@@ -35,3 +32,20 @@ class Carrinho extends Model
 
 
 }
+
+
+    // Codigos anteriores 
+    
+
+    // protected $fillable = ['user_id', 'produto_id', 'quantidade'];
+
+    // protected $table = 'carrinhos';
+
+
+    //  public function user(){ 
+        
+    //     return $this->belongsTo(User::class , 'user_id');
+
+    //     // return $this->belongsTo(User::class);
+
+    // }

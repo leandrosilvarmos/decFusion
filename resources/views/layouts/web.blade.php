@@ -20,11 +20,8 @@
 
     <!-- Fonts -->
   
-    <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Quicksand&display=swap" rel="stylesheet">
 
 
     <!-- Styles -->
@@ -39,32 +36,45 @@
 <body>
 
     <header>
-        <section class="navbar">
-            <div>
-                <img src="" alt="">
-            </div>
-            <nav>
 
+        <header>
+            <h1 class="container">
+                <img src="../../assets/dacfusionBlack.jpg" alt="logo" />
+
+            </h1>
+{{--     
+            <section class="navbar">
+                <nav>
+    
+                    <div>
+                        <ul class="nav-links">
+                            <li><a href="#" class="active">Conceito</a></li>
+                            <li><a href="#">Empresa</a></li>
+                            <!-- <li><a href="#">Produtos</a></li>-->
+                            <li><a href="#">Saiba mais</a></li>
+                        </ul>
+                    </div>
+    
+                </nav>
                 <div>
-                    <ul class="nav-links">
-                        <li><a href="#" class="active">Conceito</a></li>
-                        <li><a href="#">Empresa</a></li>
-                        <!-- <li><a href="#">Produtos</a></li>-->
-                        <li><a href="#">Saiba mais</a></li>
-                    </ul>
+                    <a href="{{ route('login') }}" class="btn-links">Login</a>
+                    <a href="{{ route('register') }}" class="btn-links">Cadastre-se</a>
                 </div>
+            </section> --}}
 
-            </nav>
-            <div>
-                <a href="{{ route('login') }}" class="btn-links">Login</a>
-                <a href="{{ route('register') }}" class="btn-links">Cadastre-se</a>
+
+            <div class="header-container">
+                <img class="" src="../../assets/header2.png" alt="">
+    
+                <div class="header-info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur quaerat cupiditate
+                        molestias voluptatum soluta eos nemo, dolorem blanditiis eum?</p>
+                    <a href="#nossos-produtos">Saiba mais</a>
+                </div>
             </div>
-        </section>
+        </header>
 
-
-        <h1>
-            dacFusion
-        </h1>
+      
 
     </header>
 
