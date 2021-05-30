@@ -37,30 +37,23 @@
 
     <header>
 
-        <header>
             <h1 class="container">
                 <img src="../../assets/dacfusionBlack.jpg" alt="logo" />
 
             </h1>
-{{--     
-            <section class="navbar">
-                <nav>
     
-                    <div>
+            <nav class="navbar">
+                
                         <ul class="nav-links">
                             <li><a href="#" class="active">Conceito</a></li>
-                            <li><a href="#">Empresa</a></li>
-                            <!-- <li><a href="#">Produtos</a></li>-->
-                            <li><a href="#">Saiba mais</a></li>
+                            <li><a href="#">Produtos</a></li>
                         </ul>
-                    </div>
     
-                </nav>
-                <div>
-                    <a href="{{ route('login') }}" class="btn-links">Login</a>
-                    <a href="{{ route('register') }}" class="btn-links">Cadastre-se</a>
-                </div>
-            </section> --}}
+                        <ul>
+                            <li><a href="{{ route('login') }}" class="btn-links">Login</a></li>
+                            <li><a href="{{ route('register') }}" class="btn-links">Cadastre-se</a></li>
+                        </ul>
+            </nav>
 
 
             <div class="header-container">
@@ -72,8 +65,6 @@
                     <a href="#nossos-produtos">Saiba mais</a>
                 </div>
             </div>
-        </header>
-
       
 
     </header>

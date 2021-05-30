@@ -1,4 +1,4 @@
-# Hardware Spot
+# dacFusion
 
 > Uma plataforma de e-commerce para o nicho de decoração de ambientes integrada a um aplicativo web, a qual tem como principal objetivo unir os clientes que irao adquirir os produtos com os profissionais cadastrados na plataforma.
 
