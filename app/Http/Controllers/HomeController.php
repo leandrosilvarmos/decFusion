@@ -25,6 +25,9 @@ class HomeController extends Controller
     }
 
     
+    public function escolherLogin(){
+        return view('web.escolherlogin');
+    }
 
     public function show(){
         return view('carrinho')->with('produtos', Produtos::all());

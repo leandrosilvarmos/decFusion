@@ -19,7 +19,7 @@
 
 
     <!-- Fonts -->
-  
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Quicksand&display=swap" rel="stylesheet">
 
@@ -37,36 +37,18 @@
 
     <header>
 
-            <h1 class="container">
-                <img src="../../assets/dacfusionBlack.jpg" alt="logo" />
+        <img class="logo" src="../../assets/dacfusionBlack.jpg" alt="logo" />
 
-            </h1>
-    
-            <nav class="navbar">
-                
-                        <ul class="nav-links">
-                            <li><a href="#" class="active">Conceito</a></li>
-                            <li><a href="#">Produtos</a></li>
-                        </ul>
-    
-                        <ul>
-                            <li><a href="{{ route('login') }}" class="btn-links">Login</a></li>
-                            <li><a href="{{ route('register') }}" class="btn-links">Cadastre-se</a></li>
-                        </ul>
-            </nav>
+        <nav>
 
+            <ul class="nav-links">
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Conceito</a></li>
+                <li><a href="#">Produtos</a></li>
+            </ul>
+        </nav>
 
-            <div class="header-container">
-                <img class="" src="../../assets/header2.png" alt="">
-    
-                <div class="header-info">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur quaerat cupiditate
-                        molestias voluptatum soluta eos nemo, dolorem blanditiis eum?</p>
-                    <a href="#nossos-produtos">Saiba mais</a>
-                </div>
-            </div>
-      
-
+                <a href="{{ route('register') }}" class="btn-links">Realize seu Login</a>
     </header>
 
 
@@ -75,6 +57,29 @@
         @yield('content')
 
     </main>
+
+    <footer class="footerBg">
+        <div class="footer-container container">
+            <img class="footer-logo" src="../assets/dacfusionWhite.png" alt="Logo" />
+    
+            <div class="footer-info">
+                <div class="ftRedes-sociais">
+                    <span>Redes Sociais</span>
+                    <img src="../assets/facebook.png" alt="redes sociais" />
+                    <img src="../assets/instagram.png" alt="redes sociais" />
+                </div>
+                <div class="ftContato">
+                    <span>Contato</span>
+                    <p>Insira seu e-mail</p>
+                    <input type="text" />
+                </div>
+                <div class="ftEndereco">
+                    <span>Endereço</span>
+                    <p>Avenida Eusébio Stevaux 4007 São Paulo, SP - 047-200</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -2,25 +2,49 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 class ClientesController extends Controller
 {
+        use AuthenticatesUsers;
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    public function __construct(){
+            $this->middleware('cliente');
+    }
+  
+
+
+    public function Authlogin(Request $request)
     {
-        //
+        $this->validate($request, [
+            'email' => 'required|email' , 
+            'senha' => 'required',
+        ]); 
+
+        if (auth()->guard('cliente')->attempt([
+            'email' => $request->input('email'), 
+            'senha' => $request->input('senha')
+            ])){
+                return redirect()->route('/');
+            }else{
+                dd('erro');
+        }
+
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function login (){
+        return view('web.clientes.login');
+
+    }
+
     public function create()
     {
         return view('web.clientes.create');

@@ -28,8 +28,10 @@ Route::get('/', function(){
     return view('welcome');})->name('home');
 
 // Rotas das paginas de Clientes
-Route::get('/clientes/create' , 'ClientesController@create')->name('cliente-create');
 
+Route::get('/clientes/create' , 'ClientesController@create')->name('cliente-create');
+Route::get('/clientes/login' , 'ClientesController@login')->name('cliente-login');
+Route::get('/escolherlogin' , 'HomeController@escolherLogin')->name('escolher-login');
 
 Route::middleware(['auth'])->group(function(){
     Route::get('/carinho/index' , 'CarrinhoController@index')->name('carrinho');

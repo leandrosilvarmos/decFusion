@@ -1,6 +1,17 @@
 @extends('layouts.web')
 @section('content')
 
+
+<div class="header-container">
+    <img class="" src="../../assets/header2.png" alt="">
+
+    <div class="header-info">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur quaerat cupiditate
+            molestias voluptatum soluta eos nemo, dolorem blanditiis eum?</p>
+        <a href="#nossos-produtos">Saiba mais</a>
+    </div>
+</div>
+
 <section id="nossos-produtos" class="sc-nossosProds container">
     <h2>Nossos Produtos</h2>
 

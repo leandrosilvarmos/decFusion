@@ -66,6 +66,8 @@ class Kernel extends HttpKernel
         'apiJwt' => \App\Http\Middleware\apiProtectRoute::class,
         'VerifyCategoriasCount' => \App\Http\Middleware\VerifyCategoriascount::class,
         'admin' => \App\Http\Middleware\VerifyIsAdmin::class,
+        'cliente' => \App\Http\Middleware\AuthClientes::class , 
+        'profissional' => \App\Http\Middleware\AuthProfissionais::class, 
 
 
     ];

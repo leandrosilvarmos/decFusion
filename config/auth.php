@@ -40,6 +40,15 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'cliente' => [
+            'driver' => 'session' , 
+            'provider' => 'cliente',
+        ] ,
+
+        'profissionai' => [
+            'driver' => 'session', 
+            'provider' => 'profissional',
+        ] , 
 
         'api' => [
             'driver' => 'jwt',
