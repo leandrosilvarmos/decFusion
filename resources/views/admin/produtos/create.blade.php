@@ -54,13 +54,18 @@
 
     <div class="row mt-4 mb-4">
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control @error('tag_name') is-invalid @enderror" name="tag_name" placeholder="Tag Name para acessebilidade">
+            <small><span class="text-danger">{{ $errors->first('tag_name') }}</span></small>
+        </div>
+
+        <div class="form-group col-md-3">
             <input type="text" class="form-control @error('dimensao') is-invalid @enderror" name="dimensao" value="{{old('dimensao')}}" placeholder="Dimensao do Produto - Tamanho e Altura">
             <small><span class="text-danger">{{ $errors->first('dimensao') }}</span></small>
         </div>
 
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-3">
             <input type="text" class="form-control @error('peso') is-invalid @enderror" name="peso" placeholder="Peso do Produto">
             <small><span class="text-danger">{{ $errors->first('peso') }}</span></small>
         </div>

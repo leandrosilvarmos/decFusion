@@ -113,7 +113,8 @@ class ProdutosController extends Controller
             'preco' => $request->preco,
             'descricao' => $request->descricao,
             'dimensao' => $request->dimensao,
-            'peso' => $request->peso
+            'peso' => $request->peso , 
+            'tag_name' => $request->tag_name
 
 
         ]);

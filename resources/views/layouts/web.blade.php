@@ -42,13 +42,13 @@
         <nav>
 
             <ul class="nav-links">
-                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="{{route('home')}}" class="active">Inicio</a></li>
                 <li><a href="#">Conceito</a></li>
                 <li><a href="#">Produtos</a></li>
             </ul>
         </nav>
 
-                <a href="{{ route('register') }}" class="btn-links">Realize seu Login</a>
+                <a href="{{ route('escolher-login') }}" class="btn-links">Realize seu Login</a>
     </header>
 
 

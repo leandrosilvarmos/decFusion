@@ -26,6 +26,7 @@ class CreateProdutosTable extends Migration
             $table->text('image');
             $table->string('dimensao');
             $table->double('peso');
+            $table->string('tag_name');
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');
             $table->timestamps();
         });

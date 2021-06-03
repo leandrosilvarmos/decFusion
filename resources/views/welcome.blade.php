@@ -68,28 +68,7 @@
     <img src="../assets/iconPlaystore.jpg" alt="Playstore" />
 </section>
 
-<footer class="footerBg">
-    <div class="footer-container container">
-        <img class="footer-logo" src="../assets/dacfusionWhite.png" alt="Logo" />
 
-        <div class="footer-info">
-            <div class="ftRedes-sociais">
-                <span>Redes Sociais</span>
-                <img src="../assets/facebook.png" alt="redes sociais" />
-                <img src="../assets/instagram.png" alt="redes sociais" />
-            </div>
-            <div class="ftContato">
-                <span>Contato</span>
-                <p>Insira seu e-mail</p>
-                <input type="text" />
-            </div>
-            <div class="ftEndereco">
-                <span>Endereço</span>
-                <p>Avenida Eusébio Stevaux 4007 São Paulo, SP - 047-200</p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 
 @endsection

@@ -12,7 +12,8 @@
 
 
     <!-- Scripts -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="{{ asset('js/app.js') }}"></script>
 
@@ -41,7 +42,9 @@
             <div class="flex-grow-1 navbar navbar-expand-lg w-100 mw-100 p-0">
                 <a class="navbar-brand" href="#">
                 </a>
-                <button class="mr-4 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="mr-4 navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -54,11 +57,13 @@
                             </div>
                         </div>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-anim mr-2">
-                            <a class="navbar-item nav-link btn-logout dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); 
+                            <a class="navbar-item nav-link btn-logout dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault(); 
             document.getElementById('logout-form').submit();">
-                                {{ ('Sair') }}
+                                {{ 'Sair' }}
                             </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                style="display: none;">
                                 @csrf
                             </form>
                         </div>
@@ -70,38 +75,42 @@
         </div>
         <div class="bg-green seperator w-100"></div>
     </nav>
-    <section class="wrap-whole d-flex">
-        <div class="inner">
-            <section class="vertical-navbar p-3 sidebar" id="sidebar">
-                <a class="dashboard-link d-flex align-items-center px-2 py-1 pointer mb-3" href="{{route('dashboard')}}">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <span class="ml-2 nav-item-text">Inicio</span>
-                </a>
-                <a href="{{route('users.index')}}"><i class="fas fa-user"" aria-hidden="true"></i><span class="title">Administrador</span></a>
-                <a href="{{route('categoria.index')}}"><i class="fa fa-tag" aria-hidden="true"></i><span class="title">Categorias</span></a>
-                <a href="{{route('produtos.index')}}"><i class="fa fa-cubes" aria-hidden="true"></i><span class="title">Produtos</span></a>
-                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="title">Vendas</span></a>
-                <a href="#"><i class="fa fa-user-tie" aria-hidden="true"></i><span class="title">Profissionais</span></a>
-            </section>
+    <section class="wrapper">
+        <div class="sidebar">
+
+            <h2> DecFusion </h2>
+            <ul>
+                <li><a class="dashboard-link" href="{{ route('dashboard') }}"><i class="fa fa-home"
+                            aria-hidden="true"></i><span class="title">Inicio</span></a></li>
+                <li><a href="{{ route('users.index') }}"><i class="fas fa-user"" aria-hidden=" true"></i><span
+                            class="title">Administrador</span></a></li>
+                <li><a href="{{ route('categoria.index') }}"><i class="fa fa-tag" aria-hidden="true"></i><span
+                            class="title">Categorias</span></a></li>
+                <li><a href="{{ route('produtos.index') }}"><i class="fa fa-cubes" aria-hidden="true"></i><span
+                            class="title">Produtos</span></a> </li>
+                <li><a href="#"><i class="fa fa-user-tie" aria-hidden="true"></i><span class="title">Clientes</span></a>
+                </li>
+                <li><a href="#"><i class="fa fa-user-tie" aria-hidden="true"></i><span
+                            class="title">Profissionais</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span
+                            class="title">Vendas</span></a></li>
+            </ul>
         </div>
+        <section class="main-content">
 
+            <section class="content">
 
-
-
-        <section class="main-content container">
-            <section class="container-fluid">
-                @if(session()->has('success'))
-                <div class="alert alert-success">
-                    {{session()->get('success')}}
-                </div>
+                @yield('content')
+                @if (session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
                 @endif
-                @if(session()->has('error'))
-                <div class="alert alert-danger">{{session()->get('error')}}</div>
+                @if (session()->has('error'))
+                    <div class="alert alert-danger">{{ session()->get('error') }}</div>
                 @endif
             </section>
 
-
-            @yield('content')
 
         </section>
     </section>

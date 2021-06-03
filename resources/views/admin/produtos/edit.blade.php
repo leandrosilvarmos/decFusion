@@ -47,20 +47,25 @@
         </div>
 
         <div class="form-group col-md-4">
-            <input type="text" class="form-control @error('preco') is-invalid @enderror" name="preco" value="{{$produtos->preco}}" 
+            <input type="text" class="form-control @error('preco') is-invalid @enderror" name="preco" value="{{$produtos->preco}}">
             <small><span class="text-danger">{{ $errors->first('preco') }}</span></small>
         </div>
     </div>
 
     <div class="row mt-4 mb-4">
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-4">
+            <input type="text" class="form-control @error('tag_name') is-invalid @enderror" name="tag_name" value="{{$produtos->tag_name}}">
+            <small><span class="text-danger">{{ $errors->first('tag_name') }}</span></small>
+        </div>
+
+        <div class="form-group col-md-3">
             <input type="text" class="form-control @error('dimensao') is-invalid @enderror" name="dimensao" value="{{$produtos->dimensao}}">
             <small><span class="text-danger">{{ $errors->first('dimensao') }}</span></small>
         </div>
 
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-3">
             <input type="text" class="form-control @error('peso') is-invalid @enderror" name="peso" value="{{$produtos->peso}}">
             <small><span class="text-danger">{{ $errors->first('peso') }}</span></small>
         </div>
