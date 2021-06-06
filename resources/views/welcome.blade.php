@@ -37,19 +37,22 @@
 
         <div class="sc-diferenciais-info">
             <div class="diferenciais">
-                <span>Consumidores</span>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia necessitatibus tempora
-                    sunt totam nobis?</p>
+                <span>Objetivo</span>
+                <p>A plataforma tem como o principal objetivo, proporcionar a todos os clientes uma experiencia unica, a qual ele pode adquirir seus produtos
+                    de forma simples e rapida, obter informações das melhores formas para acomodar o produto adquirido ao seu ambiente, seja de casa, trabalho ou empresa.
+                </p>
             </div>
             <div class="diferenciais">
                 <span>Interação</span>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia necessitatibus tempora
-                    sunt totam nobis?</p>
+                <p>A interação da plataforma ela acontece da seguinte forma, temos diversos profissionais da area de arquitetura, desing de interiores etc. cadastrados em nossa plataforma
+                    assim quando finalizar um compra, voce automaticamente pode solicitar atendimento com um profissionais cadastrados.
+                </p>
             </div>
             <div class="diferenciais">
                 <span>Diferencial</span>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur officia necessitatibus tempora
-                    sunt totam nobis?</p>
+                <p>Esse diferencial traz uma facilidade consideravel a todos os clientes que irão efetuar compras na plataforma, pois dessa forma o contato com o 
+                    profissional, que podera auxilia-lo da melhor maneira possivel se torna facil e rapido.Assim esperamos otimizar a experiencia de nossos clientes.
+                </p>
             </div>
         </div>
     </div>
@@ -57,11 +60,10 @@
 
 <section class="sc-nossoApp container">
     <div class="sc-nossoApp-info">
-        <h3>Baixe nosso App</h3>
+        <h2>Baixe nosso App</h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sit veniam quasi velit repellendus
-            nihil debitis suscipit, in tenetur. Voluptate repellat impedit esse quod neque nesciunt ipsa voluptatem
-            commodi, dolorem temporibus rem est omnis inventore delectus? Aut numquam non maxime?
+          Realize o donwload do nosso aplicativo, para realizar o seu cadastro seja como cliente ou profissional é ter a experiencia completa , conhecer nossos produtos
+          e poder adquiri-lós quando e onde quiser, <span>disponivél para qualquer smartphone android somente na PlayStore<span>.
         </p>
     </div>
 
