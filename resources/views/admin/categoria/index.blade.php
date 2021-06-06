@@ -71,11 +71,11 @@
                     <td>{{$categoria->nome}}</td>
                     <td>{{$categoria->tipo}}</td>
                     <td>
-                        <a href="{{route('categoria.edit', $categoria->id)}}" class="btn btn-warning btn-sm text-white">Editar</a>
+                        <a href="{{route('categoria.edit', $categoria->id)}}" class="btn btn-warning btn-sm">Editar</a>
                         <form action="#" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer apagar?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" href="#" class="btn btn-danger btn-sm"> Mover para Lixeira</button>
+                            <button type="submit" href="#" class="btn btn-dark btn-sm"> Mover para Lixeira</button>
                         </form>
 
                     </td>

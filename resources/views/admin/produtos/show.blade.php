@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="col-md-2 container py-2">
-            <img class="imagem-produto" src="{{asset('storage/'.$produtos->image)}}" alt="Imagem do produto">
+            <img class="imagem-produto" src="{{asset('storage/'.$produtos->image)}}" alt="{{$produtos->tag_name}}">
         </div>
     </div>
 

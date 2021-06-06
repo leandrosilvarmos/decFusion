@@ -66,4 +66,8 @@ class User extends Authenticatable implements JWTSubject
     public function carrinho(){
         return $this->hasMany(Carrinho::class);
     }
+
+    public function pedido(){
+        return $this->hasMany(Pedidos::class);
+    }
 }

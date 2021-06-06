@@ -48,9 +48,11 @@ Route::middleware(['auth' , 'admin'])->group(function () {
     Route::put('restore.produtos/{produtos}', 'ProdutosController@restore')->name('produtos.restore');
     Route::resource('categoria', 'CategoriaController');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('users', 'UsersController@index')->name('users.index');
-    Route::get('user/perfil', 'DashboardController@edit')->name('perfil.edit');
-    Route::put('user/perfil', 'UsersController@update')->name('perfil.update');
+    Route::get('users', 'AdminController@index')->name('users.index');
+    Route::get('user/perfil', 'AdminController@edit')->name('perfil.edit');
+    Route::put('user/{user}/perfil', 'AdminController@update')->name('perfil.update');
+    Route::put('user/{user}/autentica-admin', 'AdminController@changeAdmin')->name('autentica.admin');
+    Route::get('user/novo-usuario-admin', 'AdminController@NewUserAdmin')->name('novo.usuario.admin');
 
 
 

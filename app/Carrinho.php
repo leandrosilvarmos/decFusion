@@ -7,20 +7,29 @@ use Illuminate\Database\Eloquent\Model;
 class Carrinho extends Model
 {
     
+    // 'cliente_id', 'profissional_id' 
 
-    protected $fillable = ['cliente_id', 'profissional_id' , 'produto_id' , 'quantidade'];
+    protected $fillable = ['user_id', 'produto_id' , 'quantidade'];
 
   
-
-    public function Cliente(){
-        return $this->belongsTo(Cliente::class , 'cliente_id');
+    public function user(){ 
         
+        return $this->belongsTo(User::class , 'user_id');
+
+        // return $this->belongsTo(User::class);
+
     }
 
 
-    public function Profissiona(){
-        return $this->belongsTo(Profissional::class,  'profissional_id');
-    }
+    // public function Cliente(){
+    //     return $this->belongsTo(Cliente::class , 'cliente_id');
+        
+    // }
+
+
+    // public function Profissiona(){
+    //     return $this->belongsTo(Profissional::class,  'profissional_id');
+    // }
 
     public function produto(){ 
         

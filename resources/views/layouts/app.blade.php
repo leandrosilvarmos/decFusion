@@ -61,7 +61,7 @@
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-anim mr-2">
                                     <a class="navbar-item nav-link btn-logout dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); 
-        document.getElementById('logout-form').submit();">
+                    document.getElementById('logout-form').submit();">
                                         {{ 'Sair' }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -119,6 +119,8 @@
 
 
         @else
+            {{-- Aqui comçe a visualização de usuario que não e administrador --}}
+
 
             <nav class="flex-column navbar navbar-expand-lg navbar-light p-0 fixed-top" id="navMenu">
 
@@ -142,10 +144,9 @@
                                     </div>
                                 </div>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-anim mr-2">
-                                    <a class="dropdown-item" href="#">Edit Profile</a>
                                     <a class="navbar-item nav-link btn-logout dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); 
-        document.getElementById('logout-form').submit();">
+                    document.getElementById('logout-form').submit();">
                                         {{ 'Sair' }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -161,19 +162,25 @@
                 </div>
                 <div class="bg-green seperator w-100"></div>
             </nav>
-            <section class="wrap-whole d-flex">
-                <div class="inner">
-                    <section class="vertical-navbar p-3 sidebar" id="sidebar">
-                        <i id="btnToggleSlimMenu" class="fa fa-list text-green pointer mb-3" role="button"></i>
-                        <a class="dashboard-link d-flex align-items-center px-2 py-1 bg-green pointer mb-3"
-                            href="{{ route('dashboard') }}">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                            <span class="ml-2 text-white font-weight-light nav-item-text">Inicio</span>
-                        </a>
-                        <a href="#"><i class="fas fa-sliders-h" aria-hidden="true"></i><span class="title">Perfil</span></a>
-                        <a href="#"><i class="fa fa-users" aria-hidden="true"></i><span
-                                class="title">Profissionais</span></a>
-                    </section>
+            <section class="wrapper">
+                <div class="sidebar">
+                    <h2> DecFusion </h2>
+                    <ul>
+                        <li><a class="dashboard-link" href="{{ route('dashboard') }}"><i class="fa fa-home"
+                                    aria-hidden="true"></i><span class="title">Inicio</span></a></li>
+                        <li><a href="{{ route('users.index') }}"><i class="fas fa-user"" aria-hidden=" true"></i><span
+                                    class="title">Administrador</span></a></li>
+                        <li><a href="{{ route('categoria.index') }}"><i class="fa fa-tag" aria-hidden="true"></i><span
+                                    class="title">Categorias</span></a></li>
+                        <li><a href="{{ route('produtos.index') }}"><i class="fa fa-cubes" aria-hidden="true"></i><span
+                                    class="title">Produtos</span></a> </li>
+                        <li><a href="#"><i class="fa fa-user-tie" aria-hidden="true"></i><span
+                                    class="title">Clientes</span></a></li>
+                        <li><a href="#"><i class="fa fa-user-tie" aria-hidden="true"></i><span
+                                    class="title">Profissionais</span></a></li>
+                        <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span
+                                    class="title">Vendas</span></a></li>
+                    </ul>
                 </div>
                 <section class="main-content">
 
@@ -194,10 +201,12 @@
             </section>
         @endif
     @endauth
+
+    <main class="container">
+        @yield('contents')
+    </main>
 </body>
 
-<main class="container">
-    @yield('contents')
-</main>
+
 
 </html>

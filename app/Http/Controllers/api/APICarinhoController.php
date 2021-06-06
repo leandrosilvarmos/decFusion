@@ -88,7 +88,8 @@ class APICarinhoController extends Controller
                 Carrinho::create([
                     'user_id' => $userId,
                     'produto_id' => $request->produto_id,
-                    'quantidade' => 1
+                    'quantidade' => 1 ,
+                  
 
                 ]);
 
@@ -106,6 +107,38 @@ class APICarinhoController extends Controller
     }
 
   
+
+    public function removeProduto(Request $request)
+    {
+
+        if (!$request->produto_id) {
+
+            return response()->json(["Error" => "Requisição Incompleta "], 400);
+        }
+
+        $user = auth()->user()->id;
+
+        $checkCart = Carrinho::all()->where('user_id', $user)->where('produto_id', $request->produto_id)->first();
+
+        if ($checkCart == null) {
+
+            return response()->json(["Error" => "Carrinho não encontrado"], 404);
+        }
+
+        if ($checkCart->amount > 1) {
+
+            $amount = $checkCart->amount;
+
+            $checkCart->update(['quantidade' => $amount - 1]);
+
+        } else {
+
+            $checkCart->delete();
+        }
+        $product = Produtos::findOrFail($checkCart->product_id);
+        return response()->json(["success" => "Uma unidade do produto {$product->name} removida com sucesso! "]);
+    }
+
 
     /**
      * Display the specified resource.

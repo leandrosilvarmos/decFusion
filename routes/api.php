@@ -34,6 +34,8 @@ Route::group(['middleware' => ['apiJwt']], function () {
     Route::post('/cart', 'Api\\APICarinhoController@store');
     Route::get('/cart', 'Api\\APICarinhoController@cart');
     Route::get('/cartIndex', 'Api\\APICarinhoController@index');
+    Route::post('/cartRemoveUnidade', 'Api\\APICarinhoController@removeProduto');
+
 
 });
 

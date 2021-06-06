@@ -19,7 +19,7 @@
 <div class="container-fluid mt-3">
     <div class="mb-2 py-2">
         <a class="btn btn-primary" href="{{route('produtos.create')}}">Novo Produto</a>
-        <a class="btn btn-dark" href="{{route('produtos.trashed')}}">Lixeira Produtos</a>
+        <a class="btn-danger btn " href="{{route('produtos.trashed')}}">Lixeira Produtos</a>
     </div>
 </div>
 
@@ -82,11 +82,11 @@
                     <td>{{$produto->sku}}</td>
                     <td>
                         <a href="{{route('produtos.show', $produto->id)}}" class="btn btn-primary btn-sm">Mostrar</a>
-                        <a href="{{route('produtos.edit', $produto->id)}}" class="btn btn-warning btn-sm text-white">Editar</a>
+                        <a href="{{route('produtos.edit', $produto->id)}}" class="btn btn-warning btn-sm ">Editar</a>
                         <form action="{{route('produtos.destroy' , $produto->id)}}" class="d-inline" method="POST" onsubmit="return confirm('Você tem certeza que quer mover pra lixeira?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" href="#" class="btn btn-danger btn-sm"> Mover para Lixeira</button>
+                            <button type="submit" href="#" class="btn btn-dark btn-sm"> Mover para Lixeira</button>
                         </form>
 
                     </td>
