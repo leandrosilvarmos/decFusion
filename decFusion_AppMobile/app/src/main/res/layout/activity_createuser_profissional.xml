@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundlogin3"
+    tools:context=".activities.CreateuserProfissionalActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="162dp"
+            android:layout_height="154dp"
+            android:layout_margin="16dp"
+            android:fontFamily="@font/overlock_bold"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            android:text="Profissional Realize seu Cadastro!"
+            android:textAlignment="center"
+            android:textColor="#343A40"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/account_pana" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/border_radius_cinza_claro"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <EditText
+            android:id="@+id/etNome_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input_login"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:fontFamily="@font/karma"
+            android:hint="Nome Completo"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etEmail_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input_login"
+            android:drawableStart="@drawable/ic_baseline_email"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:fontFamily="@font/karma"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etCelular_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input_login"
+            android:drawableStart="@drawable/ic_baseline_phone_android_24"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:fontFamily="@font/karma"
+            android:hint="Celular"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etEndereço_cliente"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input_login"
+            android:drawableStart="@drawable/ic_baseline_location_on_24"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:fontFamily="@font/karma"
+            android:hint="Endereço"
+            android:inputType="textPostalAddress" />
+
+        <EditText
+            android:id="@+id/etSenha_Cliente"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_input_login"
+            android:drawableStart="@drawable/ic_baseline_lock"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:fontFamily="@font/karma"
+            android:hint="Senha"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnConfirmarCadastro_Cliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/border_radius_verde"
+            android:fontFamily="@font/overlock_bold"
+            android:text="Confirmar"
+            android:textAllCaps="false"
+            android:textColor="#343A40"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

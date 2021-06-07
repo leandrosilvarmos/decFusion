@@ -1,0 +1,310 @@
+/* ---------------------------------- Reset --------------------------------- */
+
+h1,
+h2,
+h3,
+p,
+ul,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li,
+a {
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* ----------------------------- Menu ---------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 10%;
+    background-color: #DDC89B;
+}
+
+header img {
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 2rem;
+}
+
+.nav-links a,
+.btn-links {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.nav-links a:hover,
+.btn-links:hover {
+    color: #141C3A;
+}
+
+
+/* ----------------------------- Banner Header ---------------------------- */
+
+.header-container img {
+    position: relative;
+}
+
+.header-info {
+    display: flex;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    flex-direction: column;
+}
+
+.header-info p {
+    text-align: center;
+    font-size: 2.0rem;
+    width: 600px;
+    color: #dfdfdf;
+    font-family: 'Overlock', 'sans-serif';
+    font-weight: 600;
+}
+
+.header-info a {
+    font-family: 'Quicksand', 'sans-serif';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-top: 25px;
+    padding: 10px 45px;
+    color: #dfdfdf;
+    background: #141C3A;
+    align-self: center;
+}
+
+.header-info a:hover {
+    color: #DDC89B;
+}
+
+
+/* ----------------------------- Nossos Produtos ---------------------------- */
+
+.sc-nossosProds h2 {
+    font-family: 'Overlock', 'sans-serif';
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    color: #343a40;
+}
+
+.nossoProds-info {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    justify-content: space-between;
+}
+
+.produto p {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    font-family: 'Overlock', 'sans-serif';
+    color: #343a40;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    z-index: 1;
+    font-weight: 700;
+}
+
+.produto img {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #141C3A;
+    z-index: 0;
+}
+
+
+/* ------------------------------ Diferenciais ------------------------------ */
+
+.sc-diferenciaisBg {
+    background-color: #141C3A;
+}
+
+.sc-diferenciais {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.sc-diferenciais h2 {
+    font-size: 1.8rem;
+    color: #DDC89B;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    font-family: 'Overlock', 'sans-serif';
+}
+
+.sc-diferenciais-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.diferenciais span {
+    font-family: 'Overlock', 'sans-serif';
+    font-size: 1.3rem;
+    color: #dfdfdf;
+}
+
+.diferenciais span::after {
+    content: '';
+    display: block;
+    width: 140px;
+    border-bottom: 1px solid #DDC89B;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.diferenciais p {
+    width: 350px;
+    font-size: 1.1rem;
+    line-height: 25px;
+    color: #dfdfdf;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+
+/* -------------------------------- Nosso App ------------------------------- */
+
+.sc-nossoApp {
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sc-nossoApp-info h2 {
+    font-family: 'Overlock', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #343a40;
+}
+
+.sc-nossoApp-info h2::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    border-bottom: 3.5px solid #141C3A;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sc-nossoApp-info p {
+    width: 550px;
+    font-size: 1.2rem;
+    line-height: 30px;
+    text-align: center;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+.sc-nossoApp span {
+    color: #343a40;
+    font-weight: 700;
+}
+
+.sc-nossoApp img {
+    width: 500px;
+}
+
+
+/* --------------------------------- Footer --------------------------------- */
+
+.footerBg {
+    background-color: #141C3A;
+}
+
+.footer-container {
+    padding: 60px 0;
+}
+
+.footer-logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ftRedes-sociais span,
+.ftContato span,
+.ftEndereco span {
+    font-size: 1.1rem;
+    color: #dfdfdf;
+    font-family: 'Quicksand', 'sans-serif';
+    text-transform: uppercase;
+}
+
+.ftRedes-sociais span::after,
+.ftContato span::after,
+.ftEndereco span::after {
+    content: '';
+    display: block;
+    width: 140px;
+    border-bottom: 2px solid #DDC89B;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.ftRedes-sociais p,
+.ftContato p,
+.ftEndereco p {
+    width: 350px;
+    font-size: 1rem;
+    line-height: 25px;
+    color: #dfdfdf;
+    font-family: 'Quicksand', 'sans-serif';
+}
+
+.ftRedes-sociais img {
+    width: 40px;
+}
+
+.ftContato input {
+    width: 250px;
+    height: 25px;
+    margin: 5px 0;
+}

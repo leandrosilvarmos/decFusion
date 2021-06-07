@@ -1,0 +1,209 @@
+/*================= RESET ====================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Overlock', 'sans-serif';
+}
+
+
+/*================= CSS REFERENTE AO MENU SUPERIOR COM A SEPARAÇÃO ====================*/
+
+.bg-green {
+    background: #329747;
+}
+
+.text-green {
+    color: #329747;
+}
+
+.seperator {
+    height: 3px;
+    margin-top: 2px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.nav-login {
+    position: relative;
+    padding-left: 70px;
+    background: url(https://firebasestorage.googleapis.com/v0/b/cloud-functions-playground-01.appspot.com/o/Polygon%201.png?alt=media&token=ab8381b2-8c28-40ef-b33f-58a257b24b62);
+    background-size: cover;
+}
+
+
+/*================= CSS REFERENTE AO MENU LATERAL ====================*/
+
+.wrapper {
+    display: flex;
+    position: relative;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 40px;
+    background-color: #FF9717;
+    -webkit-box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0px 16px 0px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease-in-out;
+}
+
+.wrapper .sidebar h2 {
+    color: #dfdfdf;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 0;
+    color: #141C3A;
+    font-family: 'Overlock', 'sans-serif';
+}
+
+.wrapper .sidebar ul li {
+    padding: 1rem;
+}
+
+.sidebar a {
+    color: #FFFFFE;
+    line-height: 50px;
+    font-family: 'Overlock', 'sans-serif';
+    font-size: 1rem;
+}
+
+.sidebar ul li:hover,
+.sidebar a:hover {
+    background-color: #3A3C42;
+    text-decoration: none;
+    color: #dfdfdf;
+    border-radius: 0.2rem;
+}
+
+.sidebar i {
+    padding: 0 0.5rem;
+    color: #141C3A;
+    font-size: 1.2rem;
+}
+
+.wrapper .main-content {
+    width: 100%;
+    margin: 4rem 220px;
+}
+
+
+/*================= WELCOME DASHBOARD MENSAGEM ====================*/
+
+.welcome {
+    color: #dfdfdf;
+}
+
+.welcome .content {
+    background-color: #343a40;
+    padding: 10px;
+    margin-bottom: 1%;
+    border-radius: 2px;
+}
+
+.welcome p {
+    font-family: 'Quicksand', 'sans-serif';
+    color: #dfdfdf;
+}
+
+.stat-title {
+    margin: 20px;
+}
+
+
+/*================= WELCOME TABELA VENDAS ====================*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #DFDFDF;
+}
+
+.dispatched-orders table th {
+    border-bottom: none;
+    font-family: 'Overlock', 'sans-serif';
+    color: #343a40;
+    font-size: 1rem;
+}
+
+.dispatched-orders table td {
+    border-top: none;
+    font-family: 'Quicksand', 'sans-serif';
+    color: #343a40;
+}
+
+.dispatched-orders table tbody tr {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.dispatched-orders table tbody tr:hover {
+    transform: scale(1, 1) translateY(-5px);
+    -webkit-transform: scale(1, 1) translateY(-5px);
+    -moz-transform: scale(1, 1) translateY(-5px);
+    box-shadow: 0 1px 5px #343a40;
+}
+
+
+/*================= WELCOME ESTATISTICAS  ====================*/
+
+
+/* Start statistics */
+
+.statistics {
+    margin-top: 25px;
+    color: #CCC;
+}
+
+.statistics .box {
+    background-color: #141C3A;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.statistics .box>i {
+    float: left;
+    color: #FFF;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 22px;
+}
+
+.statistics .box .info {
+    float: left;
+    width: auto;
+    margin-left: 10px;
+}
+
+.statistics .box .info h3 {
+    margin: 5px 0 5px;
+    display: inline-block;
+}
+
+.statistics .box .info p {
+    color: #dfdfdf;
+    font-family: 'Overlock', 'sans-serif';
+    font-size: 1rem;
+}
+
+.statistics .box .info span {
+    color: #dfdfdf;
+    font-family: 'Overlock', 'sans-serif';
+    font-size: 1rem;
+}
