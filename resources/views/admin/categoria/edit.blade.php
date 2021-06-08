@@ -26,7 +26,7 @@
 
     <div class="float-right">
         <button type="submit" class="btn btn-success">Salvar</button>
-        <a class="btn btn-danger" href="#">Cancelar</a>
+        <a class="btn btn-dark" href="{{route('categoria.index')}}">Cancelar</a>
     </div>
 </form>
 

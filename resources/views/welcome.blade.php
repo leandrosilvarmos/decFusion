@@ -3,11 +3,11 @@
 
 
 <div class="header-container">
-    <img class="" src="../../assets/header2.png" alt="">
+    <img class="" src="../../assets/Banner.png" alt="">
 
     <div class="header-info">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos pariatur quaerat cupiditate
-            molestias voluptatum soluta eos nemo, dolorem blanditiis eum?</p>
+        <p>decFusion deseja proporcionar a todos os clientes uma verdadeira experiencia de compra, 
+            a qual em um único aplicativo você poderá comprar e ter um bom atendimento.</p>
         <a href="#nossos-produtos">Saiba mais</a>
     </div>
 </div>
@@ -33,7 +33,7 @@
 
 <section class="sc-diferenciaisBg">
     <div class="sc-diferenciais container">
-        <h2>Entenda um pouco mais sobre os diferenciais da nossa empresa.</h2>
+        <h2>Entenda um pouco mais sobre os diferenciais da nossa plataforma.</h2>
 
         <div class="sc-diferenciais-info">
             <div class="diferenciais">

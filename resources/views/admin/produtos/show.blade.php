@@ -10,18 +10,13 @@
     <div class="mb-2 py-2">
         <a class="btn btn-primary" href="{{route('produtos.index')}}">Voltar</a>
     </div>
-</div>
 
-
-
-<div class="container">
     <div class="d-flex justify-content-between align-items-center py-3 pr-5">
         <div class="">
-            <h2 class="mb-4">{{$produtos->name}}</h2>
+            <h2 class="mb-4">{{$produtos->nome}}</h2>
         </div>
     </div>
 
-    <h3 class="realce">Características</h3>
     <div class="row">
         <div class="col-md-8">
             <div class="row">
@@ -47,7 +42,7 @@
                 <textarea class="form-control bg-light" type="text" rows="3" placeholder="{{$produtos->descricao}}" readonly></textarea>
             </div>
         </div>
-        <div class="col-md-2 container py-2">
+        <div class="col-md-4">
             <img class="imagem-produto" src="{{url('storage/'.$produtos->image)}}" alt="{{$produtos->tag_name}}">
         </div>
     </div>

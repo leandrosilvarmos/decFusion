@@ -7,10 +7,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="content">
-                        <h2> Admnistrador</h2>
-                        <p> Acompanhamento de dados administrativo da empresa, é tambem a visualização de todos os clientes
-                            cadastros na plataforma. Acesso ao seu perfil de usuario.
-                        </p>
+                        <h2> Administrador</h2>
+                        <p>  Acesso ao seu perfil de usuario, e realizar a modificação do perfil dos usuarios cadastrados no sistema.</p>
                     </div>
                 </div>
             </div>

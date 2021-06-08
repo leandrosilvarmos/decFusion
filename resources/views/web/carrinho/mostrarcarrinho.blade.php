@@ -1,30 +1,30 @@
-@extends('layouts.app')
+@extends('layouts.web')
 @section('content')
-<h2>Carrinho de compra</h2>
-<section class="container py-4">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Ações</th>
-                <!-- @if(count($carrinhos) > 0 )
-                <th class="text-center" @if( Request::path()=='trashed-carrinho' ) colspan="2" @else colspan="3" @endif>Ações</th>
-                @endif -->
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($carrinhos as $carrinho)
-            <tr>
-                <td>{{$carrinho->produto->nome}}</td>
-                <td>{{$carrinho->produto->preco}}</td>
-                <td><a class="btn btn-dark" href="#">Remover Produto</a>
-                </td>
+    <div class="produto-container">
 
-            </tr>
+        <div class="carrinho-col1">
+
+            @foreach ($carrinhos as $carrinho)
+                <section class="carrinho-produto">
+
+                    <div class="carrinho-info">
+                        <span class="info-nome">{{ $carrinho->produto->nome }}</span>
+                        <span class="info-preco">R${{ $carrinho->produto->preco }}</span>
+                    </div>
+                </section>
+
+
             @endforeach
-        </tbody>
-    </table>
-    <a href="#" class="btn btn-primary btn-lg">Finalizar compra</a>
-</section>
+
+        </div>
+
+        <section class="carrinho-col2">
+            <div class="col2-bg">
+                <div class="col2-container">
+                    <h3>Checkout</h3>
+                    <a class="btn-carrinho" href="{{route('checkout')}}">Finalizar Compra</a>
+                </div>
+            </div>
+        </section>
+    </div>
 @endsection

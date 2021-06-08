@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="content">
                     <h2>Categorias</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                    <p>Realizar o cadastro de novas categorias é acompanhar a categorias mais vendida atualmente</p>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
 <div class="container-fluid mt-3">
     <div class="mb-2 py-2">
         <a class="btn btn-primary" href="{{route('categoria.create')}}">Nova Categoria</a>
-        <a class="btn btn-dark" href="#">Lixeira Categorias</a>
+        <a class="btn btn-danger" href="#">Lixeira Categorias</a>
     </div>
 </div>
 
@@ -53,7 +53,7 @@
 
 
 <div class="card shadow dispatched-orders mt-4">
-    <h6 class="stat-title font-weight-bold">Lista de Categorias</h6>
+    <h3 class="stat-title font-weight-bold">Lista de Categorias</h3>
     <div class="table-responsive">
         <table class="table orders-table">
             <thead>

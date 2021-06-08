@@ -30,7 +30,7 @@
                 <div class="box">
                     <i class="fa fa-envelope fa-fw bg-primary"></i>
                     <div class="info">
-                        <h3>{{$produtosCount}}: </h3> <span> Produtos</span>
+                        <h3>{{$produtosCount}}:</h3> <span> Produtos</span>
                         <p>cadastrados na base</p>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
 
 
 <div class="card shadow dispatched-orders mt-4">
-    <h6 class="stat-title font-weight-bold">Lista de Produtos</h6>
+    <h3 class="stat-title font-weight-bold">Lista de Produtos</h3>
     <div class="table-responsive">
         <table class="table orders-table">
             <thead>

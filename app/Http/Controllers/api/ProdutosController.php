@@ -40,6 +40,7 @@ class ProdutosController extends Controller
         $produtos->sku = $request->input('sku');
         $produtos->dimensao = $request->input('dimensao');
         $produtos->peso = $request->input('preco');
+        $produtos->tag_name = $request->input('tag_name');
 
 
 

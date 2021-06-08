@@ -16,6 +16,8 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/hotjar.js') }}"></script>
+
 
 
     <!-- Fonts -->
@@ -23,7 +25,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&family=Quicksand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 
 
     <!-- Styles -->
@@ -39,22 +43,41 @@
 
     <header>
 
-        <img class="logo" src="../../assets/dacfusionBlack.jpg" alt="logo" />
+        <img class="logo" src="../../assets/LogoProjeto-removebg-preview.png" alt="logo" />
 
         <nav>
 
             <ul class="nav-links">
-                <li><a href="{{route('home')}}" class="active">Inicio</a></li>
+                <li><a href="{{ route('home') }}" class="active">Inicio</a></li>
                 <li><a href="#">Conceito</a></li>
-                <li><a href="#">Produtos</a></li>
+                <li><a href="{{ route('produtos') }}">Produtos</a></li>
             </ul>
         </nav>
 
-                <a href="{{ route('escolher-login') }}" class="btn-links">Realize seu Login</a>
+
+        <a class="navbar-item nav-link btn-logout dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); 
+document.getElementById('logout-form').submit();">
+            {{ 'Sair' }}
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
     </header>
 
 
     <main>
+
+        <section class="content">
+
+            @if (session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}
+                </div>
+            @endif
+            @if (session()->has('error'))
+                <div class="alert alert-danger">{{ session()->get('error') }}</div>
+            @endif
+        </section>
 
         @yield('content')
 
@@ -63,7 +86,7 @@
     <footer class="footerBg">
         <div class="footer-container container">
             <img class="footer-logo" src="../assets/dacfusionWhite.png" alt="Logo" />
-    
+
             <div class="footer-info">
                 <div class="ftRedes-sociais">
                     <span>Redes Sociais</span>

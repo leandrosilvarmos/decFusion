@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Carrinho;
 use App\Produtos;
+use App\Profissional;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -15,55 +16,7 @@ class CarrinhoController extends Controller
     public function index()
     {
 
-        // // DB::enableQueryLog();
-        // $carrinho = session()->has('carrinho') ? session()->get('carrinho'):[];
-        // $user = auth()->user();
-        // $carrinho = Carrinho::with('produtos');
-        // $carrinho =  Carrinho::selectRaw('carrinhos.*')->orderByDesc('id');
-        // // dd(DB::getQueryLog());
-         // $carrinho = session()->has('carrinhos') ? session()->get('carrinhos') : [];
-        // dd($carrinho);
 
-        // return Carrinho::getContent();
-
-        // $user = auth()->user();
-        // $carrinho = $user->carrinho;
-
-        // if($carrinho->count() > 0){
-        //     foreach($carrinho as $produtos)
-        //     {
-        //         $forProduto = Produtos::withTrashed()->find($produtos->produto_id);
-        //         $produtos[] = $forProduto;
-        //     }
-
-        // }else
-        // {
-        //     $produtos =  null;
-        // }
-
-        // $user = auth()->user();
-        // $cart = $user->carrinho;
-        // $totalPrice = 0;
-
-        // if ($cart->count() > 0)
-        // {
-        //     foreach ($cart as $produtos)
-        //     {
-        //         $forProd = Produtos::withTrashed()->find($produtos->produto_id);
-
-        //         $produtos[] = $forProd;
-        //     }
-        // }
-        // else
-        // {
-        //     $produtos = null;
-        //     $totalPrice = null;
-        // }
-                // return view('mostrarcarrinho', compact('cart'));
-
-
-
-        // Esse codigo esta certo, nesse inferno.............
 
         $user = auth()->user();
         $carrinho = $user->carrinho;
@@ -76,23 +29,16 @@ class CarrinhoController extends Controller
         }
 
         
-        return view('mostrarcarrinho', ['carrinhos' => $carrinho]);
+        return view('web.carrinho.mostrarcarrinho', ['carrinhos' => $carrinho]);
        
-        // $user = auth()->user();
-        // $cart = $user->cart;
 
-        // //se o usuario não tiver carrinho, cria um carrinho vazio
-        // if($cart == null)
-        //     $cart = $cart = Carrinho::updateOrCreate(['user_id' => $user->id]);
-
-        // return view('mostrarcarrinho')->with('products', $cart->produtos);
     }
 
     public function store($id)  
     {
         $user = auth()->user();
         $produto = Produtos::find($id);
-        $carinho = Carrinho::updateOrCreate(['user_id' => $user->id , 'produto_id'=>$produto->id]);
+        $carinho = Carrinho::updateOrCreate(['user_id' => $user->id , 'produto_id'=>$produto->id , 'quantidade' => 1]);
         session()->flash('success', 'Produto adicionado ao carrinho');
 
 
@@ -100,7 +46,9 @@ class CarrinhoController extends Controller
         
     }
 
-
+    public function showProdutos(){
+        return view('web.produtos.produtos')->with('produtos', Produtos::all());
+    }
     
 
     public function destroy()
@@ -129,4 +77,11 @@ class CarrinhoController extends Controller
     //         session()->flash('success', 'Product removed successfully');
     //     }
     // }
+
+
+
+    public function checkout (){
+        
+        return view('web.carrinho.checkout')->with('profissionais' , Profissional::all());
+    }
 }

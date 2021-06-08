@@ -7,8 +7,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="content">
-                    <h2>Dashboard</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+                    <h2>Dashboard administrativo</h2>
+                    <p>Administração e acompanhamento das principais informações do sistema, clientes, produtos mais vendidos é acompanhamentode vendas realizadas.</p>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
 
 
             <div class="card shadow dispatched-orders mt-4">
-                <h6 class="stat-title font-weight-bold">Vendas</h6>
+                <h3 class="stat-title font-weight-bold">Vendas</h3>
                 <div class="table-responsive">
                     <table class="table orders-table">
                         <thead>
@@ -61,7 +61,7 @@
                                 <th>Id</th>
                                 <th>Cliente</th>
                                 <th>Data</th>
-                                <th>Calor</th>
+                                <th>Valor</th>
                                 <th></th>
                             </tr>
                         </thead>
